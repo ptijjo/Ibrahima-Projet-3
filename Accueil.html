@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <title> Page d'accueil </title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" type="text/css" href="style/normalize.css">
+        <link rel="stylesheet" type="text/css" href="styles/styles.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&family=Shrikhand&display=swap" rel="stylesheet">
+        <script src="https://kit.fontawesome.com/6863f40f67.js" crossorigin="anonymous"></script>
+        <link href="fontawesome/css/all.css" rel="stylesheet">  
+    </head>
+    <body>
+        <div class="conteneur">
+<!--***************************************** HEADER *******************************************************************************************-->
+            <header class="entete">
+                <div class="entete__logo">
+                    <img src="images/logo/ohmyfood.png" alt="logo du site" class="entete__logo__image"/>
+                </div>
+                <input type="text" name="recherche" placeholder=" Paris, Bellville" class="entete__localisation" />
+                <div class="entete__reservation">
+                    <h2> Réservez le menu qui vous convient</h2>
+                    <p>Découvrez des restaurants d'exception, sélectionné par nos soins.</p>
+                    <button class="entete__reservation__bouton-explorer">
+                        Explorer nos restaurants
+                    </button>
+
+                </div>
+            </header>
+<!--***************************************** FIN HEADER **************************************************************************************-->
+<!--****************************************** NAVIGATION *************************************************************************************-->
+            <nav class="fonctionnement">
+                <h2 class="fonctionnement__titre"> Fonctionnement</h2>
+                <div class="fonctionnement__menu">
+                    <button class="fonctionnement__menu__bouton">
+                        <p class="fonctionnement__menu__bouton__numero">1</p>
+                        <div class="fonctionnement__menu__bouton__choix">
+                            <i class="fa-solid fa-mobile-screen-button"></i>
+                            <p>Choisissez votre restaurant</p>
+                        </div>
+                    </button>
+                </div>
+
+                <div class="fonctionnement__menu">
+                    <button class="fonctionnement__menu__bouton">
+                        <p class="fonctionnement__menu__bouton__numero">2</p>
+                        <div class="fonctionnement__menu__bouton__choix">
+                            <i class="fa-solid fa-bars"></i>
+                            <p>Composez votre menu</p>
+                        </div>
+                    </button>
+                </div>
+
+                <div class="fonctionnement__menu">                   
+                    <button class="fonctionnement__menu__bouton">
+                        <p class="fonctionnement__menu__bouton__numero">3</p>
+                        <div class="fonctionnement__menu__bouton__choix">
+                            <i class="fa-solid fa-store fonctionnement__menu__bouton__choix--lieu"></i>
+                            <p>Dégustez au restaurant</p>
+                        </div>
+                    </button>
+                </div>
+
+            </nav>
+<!--***************************************** FIN NAVIGATION **********************************************************************************-->
+<!--***************************************** SECTION *****************************************************************************************-->
+            <section class="choix-restaurants">
+                <h2>Restaurants</h2>
+
+                <div class="choix-restaurants__restaurant">
+                    <a href="La-palette-du-goût.html">
+                        <img src="images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg" alt="la palette du goût" class="choix-restaurants__restaurant__image">
+                    </a>
+                    <div class="choix-restaurants__restaurant__legende">
+                        <p>La palette du goût</p>
+                        <p class="choix-restaurants__restaurant__legende__lieu"> Ménilmontant</p>
+                    </div>
+                    <div class="choix-restaurants__restaurant__favori">
+                        <i class="fa-solid fa-heart couleur-coeur"></i>
+                    </div>                    
+                </div>
+                <div class="choix-restaurants__restaurant">
+                    <a href="La-note-enchantée.html">
+                        <img src="images/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg"  alt="" class="choix-restaurants__restaurant__image">
+                    </a>
+                    <div class="choix-restaurants__restaurant__legende">
+                        <p>La note enchantée</p>
+                        <p class="choix-restaurants__restaurant__legende__lieu"> Charonne</p>
+                    </div>
+                    <div class="choix-restaurants__restaurant__favori">
+                        <i class="fa-solid fa-heart couleur-coeur"></i>
+                    </div>                    
+                </div>
+                <div class="choix-restaurants__restaurant">
+                    <a href="A-la-française.html">
+                        <img src="images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg" alt="" class="choix-restaurants__restaurant__image">
+                    </a>
+                    <div class="choix-restaurants__restaurant__legende">
+                        <p> A la française </p>
+                        <p class="choix-restaurants__restaurant__legende__lieu"> Cité rouge</p>
+                    </div>
+                    <div class="choix-restaurants__restaurant__favori">
+                        <i class="fa-solid fa-heart couleur-coeur"></i>
+                    </div>                    
+                </div>
+                <div class="choix-restaurants__restaurant">
+                    <a href="Le-délice-des-sens.html">
+                        <img src="images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg" alt="" class="choix-restaurants__restaurant__image">
+                    </a>
+                    <div class="choix-restaurants__restaurant__legende">
+                        <p> Le délice du sens</p>
+                        <p class="choix-restaurants__restaurant__legende__lieu"> Folie-Méricourt</p>
+                    </div>
+                    <div class="choix-restaurants__restaurant__favori">
+                        <i class="fa-solid fa-heart couleur-coeur"></i>
+                    </div>                    
+                </div>
+            </section>
+<!--**************************************** FIN SECTION **************************************************************************************-->
+<!--**************************************** FOOTER *******************************************************************************************-->
+            <footer class="pied-de-page">
+                <h3 class="pied-de-page__titre"> ohmyfood</h3>
+                <ul class="pied-de-page__elements">
+                    <a href="#"><li class="pied-de-page__elements__item"><i class="fa-solid fa-utensils"></i> Proposer un restaurant</li></a>
+                    <a href="#"><li class="pied-de-page__elements__item"><i class="fa-solid fa-handshake-angle"></i> Devenir partenaire</li></a>
+                    <a href="#"><li class="pied-de-page__elements__item">Mentions légales</li></a>
+                    <a href="mailto:bangouraibrahima57@gmail.com"><li class="pied-de-page__elements__item">Contact</li></a>
+                </ul>
+            </footer>
+<!--***************************************** FIN FOOTER **************************************************************************************-->
+        </div>
+    </body>
+</html>

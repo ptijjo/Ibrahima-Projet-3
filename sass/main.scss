@@ -1,0 +1,185 @@
+@import "./utils/variables";
+html, body{
+    padding: 0;
+    margin: 0;
+}
+
+*{
+    box-sizing: border-box;
+}
+.conteneur{
+    min-width: 320px;
+    width: 100%;
+    margin: auto;
+}
+
+
+@mixin police-titre-logo{
+    font-family: "Shrikhand";
+}
+
+@mixin police-texte{
+    font-family: 'Roboto';
+}
+/******************************************** PIED DE PAGE *************************************************************************************/
+.pied-de-page{
+    display: flex;
+    flex-direction: column;
+    .pied-de-page__elements{
+        list-style-type: none;
+        .pied-de-page__elements__item{
+            text-decoration: none;
+        }
+    }
+}
+/************************************************ Accueil ************************************************************************************/
+.entete{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    .entete__logo{
+        display: flex;
+        justify-content: center;
+        .entete__logo__image{
+            width: 200px;
+            height: 50px;
+            object-fit: contain;
+        }
+    }
+    .entete__localisation{
+        height: 30px;
+    }
+
+    .entete__reservation{
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        align-items: center;
+        .entete__reservation__bouton-explorer{
+            border-radius: 25px;
+            width: 200px;
+            height: 35px;
+        }
+    }
+}
+.fonctionnement{
+    display: flex;
+    flex-direction: column;
+    padding: 0 10px;
+    .fonctionnement__menu{
+        display: flex;
+        flex-direction: row;
+        border-radius: 15px;
+        padding: 0 15px;
+        margin-bottom: 15px;
+        .fonctionnement__menu__bouton{
+            border-radius: 8px;
+            width: 300px;  
+            display: flex;
+            justify-content: flex-start; 
+            align-items: center;
+            .fonctionnement__menu__bouton__numero{
+                width: 30px;
+                height: 30px;
+                border-radius: 50px;
+                background-color: $couleur-primaire;
+                color: white;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                margin: 0 20px 0 -20px;
+            }
+            .fonctionnement__menu__bouton__choix{
+                width: 200px;
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                justify-content: space-around;
+                .fonctionnement__menu__bouton__choix--lieu{
+                    color: $couleur-primaire;
+                }
+            }
+                  
+        }
+        
+    }   
+}
+.choix-restaurants{
+     display: flex;
+     flex-direction: column;
+     padding: 0 5px;
+    .choix-restaurants__restaurant{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: center;
+        border-radius: 25px;
+        border: 1px solid black;  
+        margin-bottom: 15px;  
+        .choix-restaurants__restaurant__image{
+            width: 350px;
+            height: 234px;
+            object-fit: fill;
+            border-top-left-radius: 25px;
+            border-top-right-radius: 25px;
+            
+        }
+        .choix-restaurants__restaurant__legende{
+            padding: 0 15px;
+        }
+        .choix-restaurants__restaurant__favori{
+            padding-right: 15px;
+        }
+    }
+ }
+/**************************** restaurants **********************************************************************************************/
+.entete-restaurant{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    .entete-restaurant__logo{
+        display: flex;
+        justify-content: center;
+        margin-left: 50px;
+        .entete-restaurant__logo__image{
+            width: 200px;
+            height: 50px;
+            object-fit: contain;
+        }
+    }
+}
+.image-de-fond{
+    width: 360px;
+    height: auto;
+    object-fit: contain;
+    opacity: .7;
+}
+
+.carte-restaurant{
+    display: flex;
+    flex-direction: column;
+    padding: 15px 5px;
+    margin-top: -20px;
+    border: 1px solid black;
+    border-top-left-radius: 25px;
+    border-top-right-radius: 25px;
+    .carte-restaurant__menu{
+        display: flex;
+        flex-direction: column;
+        .carte-restaurant__menu__choix{
+            display: flex;
+            flex-direction: column;
+            border: 1px solid black;
+            margin-bottom: 10px;
+            padding: 0 5px;
+            border-radius: 20px;
+            .carte-restaurant__menu__choix__ingredient-prix{
+                display: flex;
+                flex-direction: flex;
+                justify-content: space-between;
+            }
+        }
+    }
+}
