@@ -18,12 +18,31 @@ html, body {
 .pied-de-page {
   display: flex;
   flex-direction: column;
+  padding: 15px;
+  background-color: #373737;
+  color: white;
 }
-.pied-de-page .pied-de-page__elements {
+.pied-de-page__titre {
+  font-family: "Shrikhand";
+  margin: 0;
+}
+.pied-de-page__elements {
   list-style-type: none;
+  padding-left: 0;
+  margin-top: 10px;
 }
-.pied-de-page .pied-de-page__elements .pied-de-page__elements__item {
+.pied-de-page__elements__lien {
   text-decoration: none;
+  color: white;
+}
+.pied-de-page__elements__lien__item {
+  margin-bottom: 10px;
+}
+.pied-de-page__elements__lien__item__nom {
+  margin-left: 5px;
+}
+.pied-de-page__elements__lien__item__nom--long {
+  margin-left: 10px;
 }
 
 /************************************************ Accueil ************************************************************************************/
@@ -42,25 +61,33 @@ html, body {
   height: 45px;
   object-fit: contain;
 }
-.entete__localisation {
-  height: 30px;
+.entete__localisation__recherche {
+  width: 100%;
+  height: 35px;
   background-color: #dddddd;
+  text-align: center;
+}
+.entete__localisation__icone {
+  position: relative;
+  left: 100px;
+  top: 25px;
 }
 .entete__reservation {
   display: flex;
   flex-direction: column;
   text-align: center;
   align-items: center;
-  background-color: #f6f6f6;
-  padding: 0 20px 40px 20px;
+  background-color: #F6F6F6;
+  padding: 30px 20px 40px 20px;
+  margin-bottom: 10px;
 }
 .entete__reservation__bouton-explorer {
+  width: 250px;
+  height: 50px;
   border-radius: 25px;
-  width: 200px;
-  height: 35px;
+  cursor: pointer;
   color: white;
   background-color: #ff79da;
-  cursor: pointer;
 }
 .entete__reservation__titre {
   margin-bottom: 0;
@@ -81,15 +108,19 @@ html, body {
   flex-direction: row;
   border-radius: 15px;
   padding: 0 15px;
-  margin-bottom: 15px;
+  margin-bottom: 20px;
 }
 .fonctionnement__menu__bouton {
-  border-radius: 8px;
   width: 300px;
+  height: 60px;
+  border-radius: 15px;
+  font-size: 0.9rem;
   display: flex;
   justify-content: flex-start;
   align-items: center;
-  box-shadow: 2px 3px #c3c3c3;
+  cursor: pointer;
+  box-shadow: 2px 3px #dddddd;
+  background-color: #f9f9f9;
   border: none;
 }
 .fonctionnement__menu__bouton__numero {
@@ -110,7 +141,7 @@ html, body {
   align-items: center;
   justify-content: space-around;
 }
-.fonctionnement__menu__bouton__choix__choix--lieu {
+.fonctionnement__menu__bouton__choix--lieu {
   color: #9356dc;
 }
 .fonctionnement__menu__bouton--couleur {
@@ -120,8 +151,8 @@ html, body {
 .choix-restaurants {
   display: flex;
   flex-direction: column;
-  padding: 0 5px;
-  background-color: #f6f6f6;
+  padding: 0 10px 60px 10px;
+  background-color: #F6F6F6;
 }
 .choix-restaurants__restaurant {
   display: flex;
@@ -134,7 +165,7 @@ html, body {
   margin-bottom: 15px;
 }
 .choix-restaurants__restaurant__image {
-  width: 350px;
+  width: 339px;
   height: 234px;
   object-fit: fill;
   border-top-left-radius: 25px;

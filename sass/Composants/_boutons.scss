@@ -1,0 +1,17 @@
+@mixin bouton{
+    width: 300px;
+    height: 60px;
+    border-radius: 15px;
+    font-size: 0.9rem;
+    display: flex;
+    justify-content: flex-start; 
+    align-items: center;
+    cursor: pointer;
+}
+
+@mixin bouton-modulable($largeur,$hauteur,$angle){
+    width: $largeur;
+    height: $hauteur;
+    border-radius: $angle;
+    cursor: pointer;
+}
