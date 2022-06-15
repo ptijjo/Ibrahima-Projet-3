@@ -1,6 +1,7 @@
 html, body {
   padding: 0;
   margin: 0;
+  font-family: "Roboto";
 }
 
 * {
@@ -31,28 +32,43 @@ html, body {
   flex-direction: column;
   justify-content: center;
 }
-.entete .entete__logo {
+.entete__logo {
   display: flex;
   justify-content: center;
+  padding-top: 10px;
 }
-.entete .entete__logo .entete__logo__image {
+.entete__logo__image {
   width: 200px;
-  height: 50px;
+  height: 45px;
   object-fit: contain;
 }
-.entete .entete__localisation {
+.entete__localisation {
   height: 30px;
+  background-color: #dddddd;
 }
-.entete .entete__reservation {
+.entete__reservation {
   display: flex;
   flex-direction: column;
   text-align: center;
   align-items: center;
+  background-color: #f6f6f6;
+  padding: 0 20px 40px 20px;
 }
-.entete .entete__reservation .entete__reservation__bouton-explorer {
+.entete__reservation__bouton-explorer {
   border-radius: 25px;
   width: 200px;
   height: 35px;
+  color: white;
+  background-color: #ff79da;
+  cursor: pointer;
+}
+.entete__reservation__titre {
+  margin-bottom: 0;
+  font-size: x-large;
+  width: 250px;
+}
+.entete__reservation__titre {
+  margin-top: 5px;
 }
 
 .fonctionnement {
@@ -60,21 +76,23 @@ html, body {
   flex-direction: column;
   padding: 0 10px;
 }
-.fonctionnement .fonctionnement__menu {
+.fonctionnement__menu {
   display: flex;
   flex-direction: row;
   border-radius: 15px;
   padding: 0 15px;
   margin-bottom: 15px;
 }
-.fonctionnement .fonctionnement__menu .fonctionnement__menu__bouton {
+.fonctionnement__menu__bouton {
   border-radius: 8px;
   width: 300px;
   display: flex;
   justify-content: flex-start;
   align-items: center;
+  box-shadow: 2px 3px #c3c3c3;
+  border: none;
 }
-.fonctionnement .fonctionnement__menu .fonctionnement__menu__bouton .fonctionnement__menu__bouton__numero {
+.fonctionnement__menu__bouton__numero {
   width: 30px;
   height: 30px;
   border-radius: 50px;
@@ -85,23 +103,27 @@ html, body {
   justify-content: center;
   margin: 0 20px 0 -20px;
 }
-.fonctionnement .fonctionnement__menu .fonctionnement__menu__bouton .fonctionnement__menu__bouton__choix {
+.fonctionnement__menu__bouton__choix {
   width: 200px;
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: space-around;
 }
-.fonctionnement .fonctionnement__menu .fonctionnement__menu__bouton .fonctionnement__menu__bouton__choix .fonctionnement__menu__bouton__choix--lieu {
+.fonctionnement__menu__bouton__choix__choix--lieu {
   color: #9356dc;
+}
+.fonctionnement__menu__bouton--couleur {
+  background-color: #e4d5f6;
 }
 
 .choix-restaurants {
   display: flex;
   flex-direction: column;
   padding: 0 5px;
+  background-color: #f6f6f6;
 }
-.choix-restaurants .choix-restaurants__restaurant {
+.choix-restaurants__restaurant {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
@@ -111,17 +133,17 @@ html, body {
   border: 1px solid black;
   margin-bottom: 15px;
 }
-.choix-restaurants .choix-restaurants__restaurant .choix-restaurants__restaurant__image {
+.choix-restaurants__restaurant__image {
   width: 350px;
   height: 234px;
   object-fit: fill;
   border-top-left-radius: 25px;
   border-top-right-radius: 25px;
 }
-.choix-restaurants .choix-restaurants__restaurant .choix-restaurants__restaurant__legende {
+.choix-restaurants__restaurant__legende {
   padding: 0 15px;
 }
-.choix-restaurants .choix-restaurants__restaurant .choix-restaurants__restaurant__favori {
+.choix-restaurants__restaurant__favori {
   padding-right: 15px;
 }
 
@@ -132,12 +154,12 @@ html, body {
   justify-content: flex-start;
   align-items: center;
 }
-.entete-restaurant .entete-restaurant__logo {
+.entete-restaurant__logo {
   display: flex;
   justify-content: center;
   margin-left: 50px;
 }
-.entete-restaurant .entete-restaurant__logo .entete-restaurant__logo__image {
+.entete-restaurant__logo__image {
   width: 200px;
   height: 50px;
   object-fit: contain;
@@ -159,11 +181,11 @@ html, body {
   border-top-left-radius: 25px;
   border-top-right-radius: 25px;
 }
-.carte-restaurant .carte-restaurant__menu {
+.carte-restaurant__menu {
   display: flex;
   flex-direction: column;
 }
-.carte-restaurant .carte-restaurant__menu .carte-restaurant__menu__choix {
+.carte-restaurant__menu__choix {
   display: flex;
   flex-direction: column;
   border: 1px solid black;
@@ -171,9 +193,9 @@ html, body {
   padding: 0 5px;
   border-radius: 20px;
 }
-.carte-restaurant .carte-restaurant__menu .carte-restaurant__menu__choix .carte-restaurant__menu__choix__ingredient-prix {
+.carte-restaurant__menu__choix__ingredient-prix {
   display: flex;
-  flex-direction: flex;
+  flex-direction: row;
   justify-content: space-between;
 }
 

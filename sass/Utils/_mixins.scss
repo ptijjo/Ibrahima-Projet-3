@@ -1,0 +1,3 @@
+@mixin ombre($couleur){
+    box-shadow: 2px 3px $couleur;
+}
