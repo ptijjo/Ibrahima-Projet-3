@@ -1,3 +1,13 @@
+.carte-restaurant__menu__choix, .carte-restaurant__menu, .carte-restaurant, .choix-restaurants, .fonctionnement, .entete__reservation, .entete, .pied-de-page {
+  display: flex;
+  flex-direction: column;
+}
+
+.carte-restaurant__menu__choix__ingredient-prix, .carte-restaurant__titre, .entete-restaurant__logo, .entete-restaurant, .choix-restaurants__restaurant, .fonctionnement__menu__bouton__choix, .fonctionnement__menu__bouton__numero, .fonctionnement__menu, .entete__logo {
+  display: flex;
+  flex-direction: row;
+}
+
 html, body {
   padding: 0;
   margin: 0;
@@ -16,8 +26,6 @@ html, body {
 
 /******************************************** PIED DE PAGE *************************************************************************************/
 .pied-de-page {
-  display: flex;
-  flex-direction: column;
   padding: 15px;
   background-color: #373737;
   color: white;
@@ -47,12 +55,9 @@ html, body {
 
 /************************************************ Accueil ************************************************************************************/
 .entete {
-  display: flex;
-  flex-direction: column;
   justify-content: center;
 }
 .entete__logo {
-  display: flex;
   justify-content: center;
   padding-top: 10px;
 }
@@ -66,6 +71,9 @@ html, body {
   height: 35px;
   background-color: #dddddd;
   text-align: center;
+  border-bottom: 2px;
+  border-left: none;
+  border-right: none;
 }
 .entete__localisation__icone {
   position: relative;
@@ -73,8 +81,6 @@ html, body {
   top: 25px;
 }
 .entete__reservation {
-  display: flex;
-  flex-direction: column;
   text-align: center;
   align-items: center;
   background-color: #F6F6F6;
@@ -87,7 +93,7 @@ html, body {
   border-radius: 25px;
   cursor: pointer;
   color: white;
-  background-color: #ff79da;
+  background-color: #9356dc;
 }
 .entete__reservation__titre {
   margin-bottom: 0;
@@ -99,13 +105,9 @@ html, body {
 }
 
 .fonctionnement {
-  display: flex;
-  flex-direction: column;
   padding: 0 10px;
 }
 .fonctionnement__menu {
-  display: flex;
-  flex-direction: row;
   border-radius: 15px;
   padding: 0 15px;
   margin-bottom: 20px;
@@ -129,15 +131,12 @@ html, body {
   border-radius: 50px;
   background-color: #9356dc;
   color: white;
-  display: flex;
   align-items: center;
   justify-content: center;
   margin: 0 20px 0 -20px;
 }
 .fonctionnement__menu__bouton__choix {
   width: 200px;
-  display: flex;
-  flex-direction: row;
   align-items: center;
   justify-content: space-around;
 }
@@ -149,20 +148,39 @@ html, body {
 }
 
 .choix-restaurants {
-  display: flex;
-  flex-direction: column;
   padding: 0 10px 60px 10px;
   background-color: #F6F6F6;
 }
 .choix-restaurants__restaurant {
-  display: flex;
-  flex-direction: row;
   flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
   border-radius: 25px;
-  border: 1px solid black;
   margin-bottom: 15px;
+  background-color: white;
+}
+.choix-restaurants__restaurant__lien {
+  text-decoration: none;
+  width: 339px;
+}
+.choix-restaurants__restaurant__lien__image {
+  width: 339px;
+  height: 234px;
+  object-fit: fill;
+  border-top-left-radius: 25px;
+  border-top-right-radius: 25px;
+}
+.choix-restaurants__restaurant__lien__nouveau {
+  background-color: #99e2d0;
+  width: 80px;
+  height: 20px;
+  text-align: center;
+  border-radius: 2px;
+  position: relative;
+  left: 250px;
+  top: 60px;
+  color: #278870;
+  margin-top: -35px;
 }
 .choix-restaurants__restaurant__image {
   width: 339px;
@@ -172,21 +190,31 @@ html, body {
   border-top-right-radius: 25px;
 }
 .choix-restaurants__restaurant__legende {
-  padding: 0 15px;
+  padding: 0px 15px;
+}
+.choix-restaurants__restaurant__legende__lieu {
+  margin-top: 0px;
+}
+.choix-restaurants__restaurant__legende__lieu {
+  margin-top: -15px;
 }
 .choix-restaurants__restaurant__favori {
   padding-right: 15px;
 }
+.choix-restaurants__restaurant__favori__coeur {
+  font-size: x-large;
+  cursor: pointer;
+}
+.choix-restaurants__restaurant__favori__coeur:hover {
+  color: #ff79da;
+}
 
 /**************************** restaurants **********************************************************************************************/
 .entete-restaurant {
-  display: flex;
-  flex-direction: row;
   justify-content: flex-start;
   align-items: center;
 }
 .entete-restaurant__logo {
-  display: flex;
   justify-content: center;
   margin-left: 50px;
 }
@@ -203,30 +231,30 @@ html, body {
   opacity: 0.7;
 }
 
+/*xxxxxxxxxxxxxxxxxxxxxx LA PALETTE DU GOUT xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx*/
 .carte-restaurant {
-  display: flex;
-  flex-direction: column;
-  padding: 15px 5px;
+  padding: 15px 15px;
   margin-top: -20px;
   border: 1px solid black;
   border-top-left-radius: 25px;
   border-top-right-radius: 25px;
+  background-color: #F6F6F6;
 }
-.carte-restaurant__menu {
-  display: flex;
-  flex-direction: column;
+.carte-restaurant__titre {
+  font-family: "Shrikhand";
+  align-items: center;
+}
+.carte-restaurant__titre__coeur {
+  margin-left: 30px;
 }
 .carte-restaurant__menu__choix {
-  display: flex;
-  flex-direction: column;
-  border: 1px solid black;
+  /* border: 1px solid black;*/
   margin-bottom: 10px;
   padding: 0 5px;
   border-radius: 20px;
+  background-color: white;
 }
 .carte-restaurant__menu__choix__ingredient-prix {
-  display: flex;
-  flex-direction: row;
   justify-content: space-between;
 }
 

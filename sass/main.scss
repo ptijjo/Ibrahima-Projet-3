@@ -3,6 +3,7 @@
 @import "./Base/polices";
 @import "./Base/box-sizing";
 @import "./Composants/boutons";
+@import "./Utils/placeholders";
 
 html, body{
     padding: 0;
@@ -19,10 +20,10 @@ html, body{
     margin: auto;
 }
 
+
 /******************************************** PIED DE PAGE *************************************************************************************/
 .pied-de-page{
-    display: flex;
-    flex-direction: column;
+    @extend %colonne;
     padding: 15px;
     background-color: darken($couleur-fond, 75%);
     color: white;
@@ -52,11 +53,10 @@ html, body{
 }
 /************************************************ Accueil ************************************************************************************/
 .entete{
-    display: flex;
-    flex-direction: column;
+    @extend %colonne;
     justify-content: center;
     &__logo{
-        display: flex;
+        @extend %ligne;
         justify-content: center;
         padding-top: 10px;
         &__image{
@@ -73,18 +73,19 @@ html, body{
             height: 35px;
             background-color: darken($couleur-fond, 10%);
             text-align: center;
+            border-bottom: 2px;
+            border-left: none;
+            border-right: none;
         }
         &__icone{
             position: relative;           
             left: 100px;
-            top: 25px;
-            
+            top: 25px;       
         }
     }
 
     &__reservation{
-        display: flex;
-        flex-direction: column;
+        @extend %colonne;
         text-align: center;
         align-items: center;
         background-color: $couleur-fond;
@@ -93,7 +94,7 @@ html, body{
         &__bouton-explorer{
             @include bouton-modulable(250px,50px,25px);
             color:white;
-            background-color: $couleur-secondaire;
+            background-color: opacify($couleur-primaire,1%);
         }
         &__titre{
           margin-bottom: 0;
@@ -106,12 +107,10 @@ html, body{
     }
 }
 .fonctionnement{
-    display: flex;
-    flex-direction: column;
+    @extend %colonne;
     padding: 0 10px;
     &__menu{
-        display: flex;
-        flex-direction: row;
+        @extend %ligne;
         border-radius: 15px;
         padding: 0 15px;
         margin-bottom: 20px;
@@ -126,15 +125,14 @@ html, body{
                 border-radius: 50px;
                 background-color: $couleur-primaire;
                 color: white;
-                display: flex;
+                @extend %ligne;
                 align-items: center;
                 justify-content: center;
                 margin: 0 20px 0 -20px;
             }
             &__choix{
                 width: 200px;
-                display: flex;
-                flex-direction: row;
+                @extend %ligne;
                 align-items: center;
                 justify-content: space-around;
                 &--lieu{
@@ -149,43 +147,78 @@ html, body{
     }   
 }
 .choix-restaurants{
-     display: flex;
-     flex-direction: column;
+     @extend %colonne;
      padding: 0 10px 60px 10px;
-     background-color: $couleur-fond;
+     background-color:$couleur-fond;
     &__restaurant{
-        display: flex;
-        flex-direction: row;
+        @extend %ligne;
         flex-wrap: wrap;
         justify-content: space-between;
         align-items: center;
-        border-radius: 25px;
-        border: 1px solid black;  
+        border-radius: 25px; 
         margin-bottom: 15px;  
+        background-color: white;  
+        &__lien{  
+            text-decoration: none;   
+            width: 339px; 
+            &__image{
+                width: 339px;
+                height: 234px;
+                object-fit: fill;
+                border-top-left-radius: 25px;
+                border-top-right-radius: 25px;           
+            }
+            &__nouveau{
+                background-color: $couleur-tertiaire;
+                width: 80px;
+                height: 20px;
+                text-align: center;
+                border-radius: 2px;
+                position: relative;
+                left: 250px;
+                top: 60px;
+                color: darken($couleur-tertiaire, 40%);
+                margin-top: -35px;
+            }
+        }
         &__image{
             width: 339px;
             height: 234px;
             object-fit: fill;
             border-top-left-radius: 25px;
-            border-top-right-radius: 25px;
-            
+            border-top-right-radius: 25px;           
         }
+        
         &__legende{
-            padding: 0 15px;
+            padding: 0px 15px;
+            &__lieu{
+                margin-top: 0px;
+                
+            }
+            &__lieu{
+                margin-top: -15px;
+            }
         }
         &__favori{
             padding-right: 15px;
+            
+            &__coeur{
+                font-size: x-large;
+                cursor: pointer;
+                &:hover{
+                    color: $couleur-secondaire;
+                }    
+            }
         }
     }
  }
 /**************************** restaurants **********************************************************************************************/
 .entete-restaurant{
-    display: flex;
-    flex-direction: row;
+    @extend %ligne;
     justify-content: flex-start;
     align-items: center;
     &__logo{
-        display: flex;
+        @extend %ligne;
         justify-content: center;
         margin-left: 50px;
         &__image{
@@ -201,28 +234,35 @@ html, body{
     object-fit: contain;
     opacity: .7;
 }
+/*xxxxxxxxxxxxxxxxxxxxxx LA PALETTE DU GOUT xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx*/
 
 .carte-restaurant{
-    display: flex;
-    flex-direction: column;
-    padding: 15px 5px;
+    @extend %colonne;
+    padding: 15px 15px;
     margin-top: -20px;
     border: 1px solid black;
     border-top-left-radius: 25px;
     border-top-right-radius: 25px;
+    background-color: $couleur-fond;
+    &__titre{
+        @include police-titre-logo;
+        @extend %ligne;
+       align-items: center;
+       &__coeur{
+        margin-left: 30px;
+       }
+    }
     &__menu{
-        display: flex;
-        flex-direction: column;
+        @extend %colonne;
         &__choix{
-            display: flex;
-            flex-direction: column;
-            border: 1px solid black;
+            @extend %colonne;
+           /* border: 1px solid black;*/
             margin-bottom: 10px;
             padding: 0 5px;
             border-radius: 20px;
+            background-color: white;
             &__ingredient-prix{
-                display: flex;
-                flex-direction:row ;
+                @extend %ligne;
                 justify-content: space-between;
             }
         }

@@ -5,7 +5,7 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" type="text/css" href="style/normalize.css">
-        <link rel="stylesheet" type="text/css" href="sass/main.css">
+        <link rel="stylesheet" type="text/css" href="styles/styles.css">
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&family=Shrikhand&display=swap" rel="stylesheet">
@@ -29,8 +29,8 @@
 
         <section class="carte-restaurant">
             <h1 class="carte-restaurant__titre">
-                La palette du goût
-                <i class="fa-solid fa-heart"></i>
+                <p> La palette du goût</p>
+                <i class="fa-solid fa-heart carte-restaurant__titre__coeur"></i>
             </h1>
             <article class="carte-restaurant__menu">
                     <h2 class="carte-restaurant__menu__titre">ENTREES</h2>
@@ -110,15 +110,15 @@
             </section>
 <!--*****************************************  FIN CARTE ***************************************************************************************-->
 <!--**************************************** FOOTER *******************************************************************************************-->
-<footer>
-    <h3> ohmyfood</h3>
-    <ul>
-        <li><i class="fa-solid fa-utensils"></i> Prposer un restaurant</li>
-        <li><i class="fa-solid fa-handshake-angle"></i> Devenir partenaire</li>
-        <li>Mentions légales</li>
-        <li>Contact</li>
-    </ul>
-</footer>
+        <footer class="pied-de-page">
+            <h3 class="pied-de-page__titre"> ohmyfood</h3>
+            <ul class="pied-de-page__elements">
+                <a href="#" class="pied-de-page__elements__lien"><li class="pied-de-page__elements__lien__item"><i class="fa-solid fa-utensils"></i> <span class="pied-de-page__elements__lien__item__nom pied-de-page__elements__lien__item__nom--long">Proposer un restaurant</span></li></a>
+                <a href="#" class="pied-de-page__elements__lien"><li class="pied-de-page__elements__lien__item"><i class="fa-solid fa-handshake-angle"></i> <span class="pied-de-page__elements__lien__item__nom">Devenir partenaire</span></li></a>
+                <a href="#" class="pied-de-page__elements__lien"><li class="pied-de-page__elements__lien__item">Mentions légales</li></a>
+                <a href="mailto:bangouraibrahima57@gmail.com" class="pied-de-page__elements__lien"><li class="pied-de-page__elements__lien__item">Contact</li></a>
+            </ul>
+        </footer>
 <!--***************************************** FIN FOOTER **************************************************************************************-->
     </body>
 </html>
