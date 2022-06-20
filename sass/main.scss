@@ -98,7 +98,8 @@ html, body{
         &__bouton-explorer{
             @include bouton-modulable(250px,50px,25px);
             color:white;
-            background-color: opacify($couleur-primaire,1%);
+            background-image: linear-gradient($couleur-secondaire, $couleur-primaire);
+            border: none;
         }
         &__titre{
           margin-bottom: 0;
@@ -220,7 +221,11 @@ html, body{
                 font-size: x-large;
                 cursor: pointer;
                 &:hover{
-                    color: $couleur-secondaire;
+                    color: #9c47fc;
+                    display: block;
+                    background: -webkit-linear-gradient($couleur-primaire, $couleur-secondaire);
+                    -webkit-background-clip: text;
+                    -webkit-text-fill-color: transparent;
                 }    
             }
         }
@@ -247,7 +252,7 @@ html, body{
     height: auto;
     object-fit: contain;
 }
-/*xxxxxxxxxxxxxxxxxxxxxx LA PALETTE DU GOUT xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx*/
+/*xxxxxxxxxxxxxxxxxxxxxx RESTO xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx*/
 
 .carte-restaurant{
     @extend %colonne;
@@ -303,6 +308,12 @@ html, body{
                 }
                 &--valide{
                     display: none;                    
+                }
+                
+            }
+            &:hover{
+                .carte-restaurant__menu__choix__ingredient-prix--valide{
+                    display: flex;
                     background-color: $couleur-tertiaire;
                     width: 50px;
                     height: 70px;
@@ -311,16 +322,9 @@ html, body{
                     border-bottom-right-radius: 20px;
                     border-top-right-radius: 20px;                    
                     align-items: center;
-                    justify-content: center;
-                
+                    justify-content: center;                
                     font-size: large;
                     color: white;
-                }
-                
-            }
-            &:hover{
-                .carte-restaurant__menu__choix__ingredient-prix--valide{
-                    display: flex;
                 }
             }
         }
@@ -328,6 +332,48 @@ html, body{
     &__bouton{
         @include bouton-modulable(200px,50px,20px);
         margin-left: 60px;
+        background-image: linear-gradient($couleur-primaire, $couleur-secondaire);
+        border: none;
 
+    }
+}
+
+@media only screen and (min-width:768px){
+    
+    .conteneur{
+        min-width: 720px;
+        width: 100%;
+    }
+    .entete{
+        &__localisation__icone{
+            left:284px;
+            top: 26px;
+        }
+        &__reservation__titre{
+            width: 60%;
+        }
+    }
+    .fonctionnement{
+        text-align: center;
+        &__menu{
+            justify-content: center;
+        }
+    }
+    .choix-restaurants{
+        text-align: center;
+        flex-direction: row;
+        flex-wrap: wrap;
+        padding-left: 20px;
+        justify-content: space-between;
+        & h2{
+            width: 100%;
+        }
+        &__restaurant{
+            margin-right: 30px;
+        }
+    }
+
+    .pied-de-page{
+        text-align: center;
     }
 }

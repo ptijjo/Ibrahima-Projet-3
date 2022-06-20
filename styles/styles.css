@@ -100,7 +100,8 @@ html, body {
   cursor: pointer;
   cursor: pointer;
   color: white;
-  background-color: #9356dc;
+  background-image: linear-gradient(#ff79da, #9356dc);
+  border: none;
 }
 .entete__reservation__titre {
   margin-bottom: 0;
@@ -222,7 +223,11 @@ html, body {
   cursor: pointer;
 }
 .choix-restaurants__restaurant__favori__coeur:hover {
-  color: #ff79da;
+  color: #9c47fc;
+  display: block;
+  background: -webkit-linear-gradient(#9356dc, #ff79da);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 /**************************** restaurants **********************************************************************************************/
@@ -246,7 +251,7 @@ html, body {
   object-fit: contain;
 }
 
-/*xxxxxxxxxxxxxxxxxxxxxx LA PALETTE DU GOUT xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx*/
+/*xxxxxxxxxxxxxxxxxxxxxx RESTO xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx*/
 .carte-restaurant {
   padding: 15px 15px;
   margin-top: -20px;
@@ -298,6 +303,9 @@ html, body {
 }
 .carte-restaurant__menu__choix__ingredient-prix--valide {
   display: none;
+}
+.carte-restaurant__menu__choix:hover .carte-restaurant__menu__choix__ingredient-prix--valide {
+  display: flex;
   background-color: #99e2d0;
   width: 50px;
   height: 70px;
@@ -310,9 +318,6 @@ html, body {
   font-size: large;
   color: white;
 }
-.carte-restaurant__menu__choix:hover .carte-restaurant__menu__choix__ingredient-prix--valide {
-  display: flex;
-}
 .carte-restaurant__bouton {
   width: 200px;
   height: 50px;
@@ -323,6 +328,44 @@ html, body {
   cursor: pointer;
   cursor: pointer;
   margin-left: 60px;
+  background-image: linear-gradient(#9356dc, #ff79da);
+  border: none;
+}
+
+@media only screen and (min-width: 768px) {
+  .conteneur {
+    min-width: 720px;
+    width: 100%;
+  }
+  .entete__localisation__icone {
+    left: 284px;
+    top: 26px;
+  }
+  .entete__reservation__titre {
+    width: 60%;
+  }
+  .fonctionnement {
+    text-align: center;
+  }
+  .fonctionnement__menu {
+    justify-content: center;
+  }
+  .choix-restaurants {
+    text-align: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding-left: 20px;
+    justify-content: space-between;
+  }
+  .choix-restaurants h2 {
+    width: 100%;
+  }
+  .choix-restaurants__restaurant {
+    margin-right: 30px;
+  }
+  .pied-de-page {
+    text-align: center;
+  }
 }
 
 /*# sourceMappingURL=styles.css.map */
