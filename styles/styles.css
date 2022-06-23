@@ -114,6 +114,10 @@ html, body {
 
 .fonctionnement {
   padding: 0 10px;
+  align-items: center;
+}
+.fonctionnement h2 {
+  margin-left: -150px;
 }
 .fonctionnement__menu {
   border-radius: 15px;
@@ -167,6 +171,10 @@ html, body {
 .choix-restaurants {
   padding: 0 10px 60px 10px;
   background-color: #F6F6F6;
+  align-items: center;
+}
+.choix-restaurants h2 {
+  margin-left: -200px;
 }
 .choix-restaurants__restaurant {
   flex-wrap: wrap;
@@ -246,7 +254,7 @@ html, body {
 }
 
 .image-de-fond {
-  width: 360px;
+  width: 100%;
   height: auto;
   object-fit: contain;
 }
@@ -293,6 +301,9 @@ html, body {
 .carte-restaurant__menu__choix__ingredient-prix {
   justify-content: space-between;
   margin-top: -10px;
+  /*&--valide{
+          display: none;                
+  }*/
 }
 .carte-restaurant__menu__choix__ingredient-prix__ingredient {
   font-size: small;
@@ -301,7 +312,7 @@ html, body {
 .carte-restaurant__menu__choix__ingredient-prix__prix {
   font-weight: bold;
 }
-.carte-restaurant__menu__choix__ingredient-prix--valide {
+.carte-restaurant__menu__choix__ingredient-prix .fa-circle-check {
   display: none;
 }
 .carte-restaurant__menu__choix:hover .carte-restaurant__menu__choix__ingredient-prix--valide {
