@@ -19,14 +19,12 @@ html, body {
 }
 
 .conteneur {
-  min-width: 320px;
-  width: 100%;
   margin: auto;
 }
 
 /******************************************** PIED DE PAGE *************************************************************************************/
 .pied-de-page {
-  padding: 15px;
+  padding: 0 15px;
   background-color: #373737;
   color: white;
 }
@@ -62,7 +60,7 @@ html, body {
   padding-top: 10px;
 }
 .entete__logo__image {
-  width: 200px;
+  width: 60%;
   height: 45px;
   object-fit: contain;
 }
@@ -91,7 +89,7 @@ html, body {
   color: #777777;
 }
 .entete__reservation__bouton-explorer {
-  width: 250px;
+  width: 60%;
   height: 50px;
   border-radius: 25px;
   display: flex;
@@ -123,9 +121,10 @@ html, body {
   border-radius: 15px;
   padding: 0 15px;
   margin-bottom: 20px;
+  width: 100%;
 }
 .fonctionnement__menu__bouton {
-  width: 300px;
+  width: 100%;
   height: 60px;
   border-radius: 15px;
   font-size: 0.9rem;
@@ -148,7 +147,7 @@ html, body {
   margin: 0 20px 0 -15px;
 }
 .fonctionnement__menu__bouton__choix {
-  width: 200px;
+  width: 80%;
   align-items: center;
   text-align: center;
   justify-content: space-around;
@@ -171,10 +170,7 @@ html, body {
 .choix-restaurants {
   padding: 0 10px 60px 10px;
   background-color: #F6F6F6;
-  align-items: center;
-}
-.choix-restaurants h2 {
-  margin-left: -200px;
+  width: 100%;
 }
 .choix-restaurants__restaurant {
   flex-wrap: wrap;
@@ -183,13 +179,26 @@ html, body {
   border-radius: 25px;
   margin-bottom: 15px;
   background-color: white;
-  width: 339px;
+  width: 100%;
+}
+.choix-restaurants__restaurant__nouveau {
+  background-color: #99e2d0;
+  width: 80px;
+  height: 20px;
+  text-align: center;
+  border-radius: 2px;
+  position: relative;
+  left: 70%;
+  top: 60px;
+  color: #278870;
+  margin-top: -35px;
 }
 .choix-restaurants__restaurant__lien {
   text-decoration: none;
+  width: 100%;
 }
 .choix-restaurants__restaurant__lien__image {
-  width: 339px;
+  width: 100%;
   height: 234px;
   object-fit: fill;
   border-top-left-radius: 25px;
@@ -202,13 +211,13 @@ html, body {
   text-align: center;
   border-radius: 2px;
   position: relative;
-  left: 250px;
+  left: 70%;
   top: 60px;
   color: #278870;
   margin-top: -35px;
 }
 .choix-restaurants__restaurant__image {
-  width: 339px;
+  width: 100%;
   height: 234px;
   object-fit: fill;
   border-top-left-radius: 25px;
@@ -229,6 +238,7 @@ html, body {
 .choix-restaurants__restaurant__favori__coeur {
   font-size: x-large;
   cursor: pointer;
+  transition: all 1s;
 }
 .choix-restaurants__restaurant__favori__coeur:hover {
   color: #9c47fc;
@@ -267,6 +277,7 @@ html, body {
   border-top-right-radius: 25px;
   background-color: #F6F6F6;
   opacity: 99%;
+  align-items: center;
 }
 .carte-restaurant__titre {
   font-family: "Shrikhand";
@@ -279,6 +290,7 @@ html, body {
 .carte-restaurant__menu {
   margin-top: -30px;
   margin-bottom: 30px;
+  width: 100%;
 }
 .carte-restaurant__menu__titre {
   font-size: 1.2rem;
@@ -338,15 +350,14 @@ html, body {
   align-items: center;
   cursor: pointer;
   cursor: pointer;
-  margin-left: 60px;
-  background-image: linear-gradient(#9356dc, #ff79da);
+  background-image: linear-gradient(#ff79da, #9356dc);
   border: none;
+  color: white;
 }
 
 @media only screen and (min-width: 768px) {
   .conteneur {
     min-width: 720px;
-    width: 100%;
   }
   .entete__localisation__icone {
     left: 284px;

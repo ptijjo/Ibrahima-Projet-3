@@ -1,0 +1,39 @@
+@media only screen and (min-width:768px){
+    
+    .conteneur{
+        min-width: 720px;
+        
+    }
+    .entete{
+        &__localisation__icone{
+            left:284px;
+            top: 26px;
+        }
+        &__reservation__titre{
+            width: 60%;
+        }
+    }
+    .fonctionnement{
+        text-align: center;
+        &__menu{
+            justify-content: center;
+        }
+    }
+    .choix-restaurants{
+        text-align: center;
+        flex-direction: row;
+        flex-wrap: wrap;
+        padding-left: 20px;
+        justify-content: space-between;
+        & h2{
+            width: 100%;
+        }
+        &__restaurant{
+            margin-right: 30px;
+        }
+    }
+
+    .pied-de-page{
+        text-align: center;
+    }
+}

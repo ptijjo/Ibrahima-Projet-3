@@ -1,0 +1,36 @@
+@media only screen and (min-width: 768px) {
+  .conteneur {
+    min-width: 720px;
+  }
+  .entete__localisation__icone {
+    left: 284px;
+    top: 26px;
+  }
+  .entete__reservation__titre {
+    width: 60%;
+  }
+  .fonctionnement {
+    text-align: center;
+  }
+  .fonctionnement__menu {
+    justify-content: center;
+  }
+  .choix-restaurants {
+    text-align: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding-left: 20px;
+    justify-content: space-between;
+  }
+  .choix-restaurants h2 {
+    width: 100%;
+  }
+  .choix-restaurants__restaurant {
+    margin-right: 30px;
+  }
+  .pied-de-page {
+    text-align: center;
+  }
+}
+
+/*# sourceMappingURL=tablette.css.map */
