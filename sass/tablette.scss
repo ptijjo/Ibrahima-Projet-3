@@ -1,8 +1,15 @@
+@import "./utils/variables";
+@import "./Utils/mixins";
+@import "./Base/polices";
+@import "./Base/box-sizing";
+@import "./Composants/boutons";
+@import "./Utils/placeholders";
+
 @media only screen and (min-width:768px){
-    
+                    /*------------------------- page d'accueil -------------------------------------*/
+   
     .conteneur{
-        min-width: 720px;
-        
+        background-color: red;
     }
     .entete{
         &__localisation__icone{
@@ -12,28 +19,56 @@
         &__reservation__titre{
             width: 60%;
         }
+        &__reservation__bouton-explorer{
+            width: 30%;
+        }
     }
     .fonctionnement{
-        text-align: center;
+        flex-direction: row;
+        flex-wrap: wrap;
         &__menu{
             justify-content: center;
+            width: 33%;
+        }
+        &__titre{
+            margin-left: 0;
+            width: 100%;
+            text-align: center;
         }
     }
     .choix-restaurants{
-        text-align: center;
         flex-direction: row;
         flex-wrap: wrap;
-        padding-left: 20px;
         justify-content: space-between;
         & h2{
             width: 100%;
+            text-align: center;
         }
         &__restaurant{
-            margin-right: 30px;
+            margin-right: 0px;
+            width: 48%;
         }
     }
 
     .pied-de-page{
         text-align: center;
+        padding-top: 20px;
     }
+    /*---------------------- fin page d'accueil -------------------------------------------------*/
+    /*----------------------- page restaurant ---------------------------------------------------*/
+
+    
+    .carte__restaurant{
+        &__menu{
+            align-items: center;
+            &choix{
+                width: 80%;
+            }
+        }
+    }
+    
+
+
+
+    /*--------------------- fin page restaurant -----------------------------------------------*/
 }

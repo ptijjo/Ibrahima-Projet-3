@@ -17,13 +17,14 @@ html, body{
 .conteneur{
     margin: auto;
     @extend %colonne;
+    overflow: hidden;
 }
 
 
 /******************************************** PIED DE PAGE *************************************************************************************/
 .pied-de-page{
     @extend %colonne;
-    padding: 0 15px;
+    padding: 15px;
     background-color: darken($couleur-fond, 75%);
     color: white;
     &__titre{
@@ -113,7 +114,7 @@ html, body{
     @extend %colonne;
     padding: 0 10px;
     align-items: center;
-    & h2{
+    &__titre{
         margin-left: -150px;
     }
     &__menu{
@@ -233,19 +234,23 @@ html, body{
         }
         &__favori{
             padding-right: 15px;
-            
-            &__coeur{
-                font-size: x-large;
-                cursor: pointer;
-                transition: all 1s;
-                &:hover{
-                    color: #9c47fc;
-                    display: block;
-                    background: -webkit-linear-gradient($couleur-primaire, $couleur-secondaire);
-                    -webkit-background-clip: text;
-                    -webkit-text-fill-color: transparent;
-                }    
-            }
+            font-size: x-large;  
+            cursor: pointer;
+            transition: all 1s; 
+            &__coeur-vide{
+                position: relative;
+                left: 55%;
+                
+            }     
+            &__coeur-plein{
+                color:white;
+            }                    
+            &:hover{
+                display: block;
+                background: -webkit-linear-gradient($couleur-primaire, $couleur-secondaire);
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+            }              
         }
     }
  }
@@ -254,10 +259,11 @@ html, body{
     @extend %ligne;
     justify-content: flex-start;
     align-items: center;
+    padding-left: 30px;
     &__logo{
         @extend %ligne;
         justify-content: center;
-        margin-left: 50px;
+        margin-left: 30%;
         &__image{
             width: 200px;
             height: 50px;
@@ -301,6 +307,9 @@ html, body{
             border-bottom: 3px solid $couleur-tertiaire;
             width: 50px;
             padding-bottom: 5px;
+            animation-duration: 3s;
+            animation-delay: -2s;
+            animation-name: glissement-menu;
         }
         &__choix{
             @extend %colonne;
@@ -352,6 +361,16 @@ html, body{
             }
         }
     }
+
+    @keyframes glissement-menu {
+        from {
+          margin-bottom: 100%;
+        }
+      
+        to {
+          margin-bottom: 5%;
+        }
+      }
     &__bouton{
         @include bouton-modulable(200px,50px,20px);
         background-image: linear-gradient($couleur-secondaire, $couleur-primaire);
@@ -361,42 +380,3 @@ html, body{
     }
 }
 
-@media only screen and (min-width:768px){
-    
-    .conteneur{
-        min-width: 720px;
-        
-    }
-    .entete{
-        &__localisation__icone{
-            left:284px;
-            top: 26px;
-        }
-        &__reservation__titre{
-            width: 60%;
-        }
-    }
-    .fonctionnement{
-        text-align: center;
-        &__menu{
-            justify-content: center;
-        }
-    }
-    .choix-restaurants{
-        text-align: center;
-        flex-direction: row;
-        flex-wrap: wrap;
-        padding-left: 20px;
-        justify-content: space-between;
-        & h2{
-            width: 100%;
-        }
-        &__restaurant{
-            margin-right: 30px;
-        }
-    }
-
-    .pied-de-page{
-        text-align: center;
-    }
-}

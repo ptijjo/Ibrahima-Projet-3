@@ -1,6 +1,7 @@
 @media only screen and (min-width: 768px) {
+  /*------------------------- page d'accueil -------------------------------------*/
   .conteneur {
-    min-width: 720px;
+    background-color: red;
   }
   .entete__localisation__icone {
     left: 284px;
@@ -9,28 +10,48 @@
   .entete__reservation__titre {
     width: 60%;
   }
+  .entete__reservation__bouton-explorer {
+    width: 30%;
+  }
   .fonctionnement {
-    text-align: center;
+    flex-direction: row;
+    flex-wrap: wrap;
   }
   .fonctionnement__menu {
     justify-content: center;
+    width: 33%;
+  }
+  .fonctionnement__titre {
+    margin-left: 0;
+    width: 100%;
+    text-align: center;
   }
   .choix-restaurants {
-    text-align: center;
     flex-direction: row;
     flex-wrap: wrap;
-    padding-left: 20px;
     justify-content: space-between;
   }
   .choix-restaurants h2 {
     width: 100%;
+    text-align: center;
   }
   .choix-restaurants__restaurant {
-    margin-right: 30px;
+    margin-right: 0px;
+    width: 48%;
   }
   .pied-de-page {
     text-align: center;
+    padding-top: 20px;
   }
+  /*---------------------- fin page d'accueil -------------------------------------------------*/
+  /*----------------------- page restaurant ---------------------------------------------------*/
+  .carte__restaurant__menu {
+    align-items: center;
+  }
+  .carte__restaurant__menuchoix {
+    width: 80%;
+  }
+  /*--------------------- fin page restaurant -----------------------------------------------*/
 }
 
 /*# sourceMappingURL=tablette.css.map */

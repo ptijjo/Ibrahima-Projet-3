@@ -20,11 +20,12 @@ html, body {
 
 .conteneur {
   margin: auto;
+  overflow: hidden;
 }
 
 /******************************************** PIED DE PAGE *************************************************************************************/
 .pied-de-page {
-  padding: 0 15px;
+  padding: 15px;
   background-color: #373737;
   color: white;
 }
@@ -114,7 +115,7 @@ html, body {
   padding: 0 10px;
   align-items: center;
 }
-.fonctionnement h2 {
+.fonctionnement__titre {
   margin-left: -150px;
 }
 .fonctionnement__menu {
@@ -234,14 +235,18 @@ html, body {
 }
 .choix-restaurants__restaurant__favori {
   padding-right: 15px;
-}
-.choix-restaurants__restaurant__favori__coeur {
   font-size: x-large;
   cursor: pointer;
   transition: all 1s;
 }
-.choix-restaurants__restaurant__favori__coeur:hover {
-  color: #9c47fc;
+.choix-restaurants__restaurant__favori__coeur-vide {
+  position: relative;
+  left: 55%;
+}
+.choix-restaurants__restaurant__favori__coeur-plein {
+  color: white;
+}
+.choix-restaurants__restaurant__favori:hover {
   display: block;
   background: -webkit-linear-gradient(#9356dc, #ff79da);
   -webkit-background-clip: text;
@@ -252,10 +257,11 @@ html, body {
 .entete-restaurant {
   justify-content: flex-start;
   align-items: center;
+  padding-left: 30px;
 }
 .entete-restaurant__logo {
   justify-content: center;
-  margin-left: 50px;
+  margin-left: 30%;
 }
 .entete-restaurant__logo__image {
   width: 200px;
@@ -297,6 +303,9 @@ html, body {
   border-bottom: 3px solid #99e2d0;
   width: 50px;
   padding-bottom: 5px;
+  animation-duration: 3s;
+  animation-delay: -2s;
+  animation-name: glissement-menu;
 }
 .carte-restaurant__menu__choix {
   margin-bottom: 10px;
@@ -341,6 +350,14 @@ html, body {
   font-size: large;
   color: white;
 }
+@keyframes glissement-menu {
+  from {
+    margin-bottom: 100%;
+  }
+  to {
+    margin-bottom: 5%;
+  }
+}
 .carte-restaurant__bouton {
   width: 200px;
   height: 50px;
@@ -353,41 +370,6 @@ html, body {
   background-image: linear-gradient(#ff79da, #9356dc);
   border: none;
   color: white;
-}
-
-@media only screen and (min-width: 768px) {
-  .conteneur {
-    min-width: 720px;
-  }
-  .entete__localisation__icone {
-    left: 284px;
-    top: 26px;
-  }
-  .entete__reservation__titre {
-    width: 60%;
-  }
-  .fonctionnement {
-    text-align: center;
-  }
-  .fonctionnement__menu {
-    justify-content: center;
-  }
-  .choix-restaurants {
-    text-align: center;
-    flex-direction: row;
-    flex-wrap: wrap;
-    padding-left: 20px;
-    justify-content: space-between;
-  }
-  .choix-restaurants h2 {
-    width: 100%;
-  }
-  .choix-restaurants__restaurant {
-    margin-right: 30px;
-  }
-  .pied-de-page {
-    text-align: center;
-  }
 }
 
 /*# sourceMappingURL=styles.css.map */
