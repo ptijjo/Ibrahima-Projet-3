@@ -263,7 +263,7 @@ html, body{
     &__logo{
         @extend %ligne;
         justify-content: center;
-        margin-left: 30%;
+        margin-left: 20%;
         &__image{
             width: 200px;
             height: 50px;
@@ -307,7 +307,7 @@ html, body{
             border-bottom: 3px solid $couleur-tertiaire;
             width: 50px;
             padding-bottom: 5px;
-            animation-duration: 3s;
+            animation-duration: 4s;
             animation-delay: -2s;
             animation-name: glissement-menu;
         }
@@ -322,6 +322,9 @@ html, body{
             &__plat{
                 font-weight: bold;
                 margin:10px 0 0 0 ;
+                white-space: nowrap;
+                overflow: clip;
+                text-overflow: ellipsis;
             }
             &__ingredient-prix{
                 @extend %ligne;
@@ -329,19 +332,26 @@ html, body{
                 margin-top: -10px;
                 &__ingredient{
                     font-size: small;
-                    @extend %ligne;
-                    align-items: center;
+                  /* @extend %ligne;
+                    align-items: center;*/
+                    white-space:nowrap;
+                    overflow:hidden;
+                    text-overflow:ellipsis;
                 }
                 &__prix{
                     font-weight: bold;
+                    position: relative;
+                    top: -10%;
+                    width: 20%;
+                    justify-content: right;
+                    display: flex;
                 }
                 /*&--valide{
                         display: none;                
                 }*/
                 .fa-circle-check{
                     display: none;
-                }
-                
+                }                
             }
             &:hover{
                 .carte-restaurant__menu__choix__ingredient-prix--valide{
@@ -358,6 +368,9 @@ html, body{
                     font-size: large;
                     color: white;
                 }
+            }
+            .fa-circle-check{
+                display: none;
             }
         }
     }
