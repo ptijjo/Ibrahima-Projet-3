@@ -54,7 +54,12 @@
     /*---------------------- fin page d'accueil -------------------------------------------------*/
     /*----------------------- page restaurant ---------------------------------------------------*/
 
-    
+    .conteneur{
+        max-width: 900px;
+        width: 90%;
+        margin: auto;
+        
+    }
     .carte__restaurant{
         &__menu{
             align-items: center;

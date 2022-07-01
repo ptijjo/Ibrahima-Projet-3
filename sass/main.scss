@@ -14,10 +14,65 @@ html, body{
 *{
     @include box-sizing;
 }
+
+.chargement{
+    
+    position: relative;
+    z-index: 1;
+    left: 150%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: whitesmoke;
+    animation: fond 2.2s linear 1;
+}
+
+.icone-chargement{
+width: 100px;
+height: 100px;
+border: 6px dashed blue;
+border-top-color: yellowgreen;
+border-radius: 50%;
+animation: chargement 2s linear 1;
+}
+
+@keyframes chargement {
+    0%{
+        transform: rotate(0deg);
+    }
+    30%{
+        transform: rotate(260deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }    
+}
+@keyframes fond {
+    0%{
+        left:0;
+    }
+
+    99%{
+        left: 0;
+    }
+
+    100%{
+        left: 150%;
+    }
+}
 .conteneur{
     margin: auto;
     @extend %colonne;
     overflow: hidden;
+}
+.conteneur-accueil{
+    margin: auto;
+    @extend %colonne;
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+    z-index: 0;
 }
 
 
@@ -98,7 +153,13 @@ html, body{
             @include bouton-modulable(60%,50px,25px);
             color:white;
             background-image: linear-gradient($couleur-secondaire, $couleur-primaire);
-            border: none;
+            @include ombre($couleur-ombre);
+            border: none;            
+            &:hover{
+                background-image: linear-gradient($couleur-secondaire-claire, $couleur-primaire-claire);
+                @include ombre(darken($couleur-ombre,20%));
+
+            }
         }
         &__titre{
           margin-bottom: 0;
@@ -107,7 +168,7 @@ html, body{
         }
         &__titre{
           margin-top: 5px;
-        }
+        }      
     }
 }
 .fonctionnement{
@@ -157,11 +218,19 @@ html, body{
                 &--couleur-fond{
                     color: darken($couleur-fond, 40%);
                 }
-            }                
+            } 
+            &:hover{
+                @include ombre(darken($couleur-fond,20%));
+                background-color: lighten($couleur-fond,5%);
+            }               
         }
         &__bouton--couleur{
             background-color: lighten($couleur-primaire, 30%);
+            &:hover{
+                background-color: lighten($couleur-primaire, 35%);
+            }
         }
+        
         
     }   
 }
@@ -367,10 +436,20 @@ html, body{
                     justify-content: center;                
                     font-size: large;
                     color: white;
+                    @keyframes valide {
+                        0%{
+                            transform: translateX(8px);
+                        }
+                        100%{
+                            transform: translateX(0px);
+                        }
+                        
+                    }
                 }
             }
             .fa-circle-check{
                 display: none;
+                animation: valide 1.5s linear;
             }
         }
     }
@@ -389,6 +468,11 @@ html, body{
         background-image: linear-gradient($couleur-secondaire, $couleur-primaire);
         border: none;
         color: white;
+        @include ombre($couleur-ombre);
+        &:hover{
+            background-image: linear-gradient($couleur-secondaire-claire, $couleur-primaire-claire);
+            @include ombre(darken($couleur-ombre,20%));
+        }
 
     }
 }

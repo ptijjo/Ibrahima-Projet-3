@@ -1,4 +1,4 @@
-.carte-restaurant__menu__choix, .carte-restaurant__menu, .carte-restaurant, .choix-restaurants, .fonctionnement, .entete__reservation, .entete, .pied-de-page, .conteneur {
+.carte-restaurant__menu__choix, .carte-restaurant__menu, .carte-restaurant, .choix-restaurants, .fonctionnement, .entete__reservation, .entete, .pied-de-page, .conteneur-accueil, .conteneur {
   display: flex;
   flex-direction: column;
 }
@@ -18,9 +18,60 @@ html, body {
   box-sizing: border-box;
 }
 
+.chargement {
+  position: relative;
+  z-index: 1;
+  left: 150%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: whitesmoke;
+  animation: fond 2.2s linear 1;
+}
+
+.icone-chargement {
+  width: 100px;
+  height: 100px;
+  border: 6px dashed blue;
+  border-top-color: yellowgreen;
+  border-radius: 50%;
+  animation: chargement 2s linear 1;
+}
+
+@keyframes chargement {
+  0% {
+    transform: rotate(0deg);
+  }
+  30% {
+    transform: rotate(260deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@keyframes fond {
+  0% {
+    left: 0;
+  }
+  99% {
+    left: 0;
+  }
+  100% {
+    left: 150%;
+  }
+}
 .conteneur {
   margin: auto;
   overflow: hidden;
+}
+
+.conteneur-accueil {
+  margin: auto;
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  z-index: 0;
 }
 
 /******************************************** PIED DE PAGE *************************************************************************************/
@@ -100,7 +151,12 @@ html, body {
   cursor: pointer;
   color: white;
   background-image: linear-gradient(#ff79da, #9356dc);
+  box-shadow: 2px 3px #CFCFCF;
   border: none;
+}
+.entete__reservation__bouton-explorer:hover {
+  background-image: linear-gradient(#ff93e1, #a16be0);
+  box-shadow: 2px 3px #9c9c9c;
 }
 .entete__reservation__titre {
   margin-bottom: 0;
@@ -164,8 +220,15 @@ html, body {
 .fonctionnement__menu__bouton__choix--couleur-fond {
   color: #909090;
 }
+.fonctionnement__menu__bouton:hover {
+  box-shadow: 2px 3px #c3c3c3;
+  background-color: white;
+}
 .fonctionnement__menu__bouton--couleur {
   background-color: #e4d5f6;
+}
+.fonctionnement__menu__bouton--couleur:hover {
+  background-color: #f2eafb;
 }
 
 .choix-restaurants {
@@ -362,8 +425,17 @@ html, body {
   font-size: large;
   color: white;
 }
+@keyframes valide {
+  0% {
+    transform: translateX(8px);
+  }
+  100% {
+    transform: translateX(0px);
+  }
+}
 .carte-restaurant__menu__choix .fa-circle-check {
   display: none;
+  animation: valide 1.5s linear;
 }
 @keyframes glissement-menu {
   from {
@@ -385,6 +457,11 @@ html, body {
   background-image: linear-gradient(#ff79da, #9356dc);
   border: none;
   color: white;
+  box-shadow: 2px 3px #CFCFCF;
+}
+.carte-restaurant__bouton:hover {
+  background-image: linear-gradient(#ff93e1, #a16be0);
+  box-shadow: 2px 3px #9c9c9c;
 }
 
 /*# sourceMappingURL=styles.css.map */
