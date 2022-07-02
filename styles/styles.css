@@ -1,9 +1,9 @@
-.carte-restaurant__menu__choix, .carte-restaurant__menu, .carte-restaurant, .choix-restaurants, .fonctionnement, .entete__reservation, .entete, .pied-de-page, .conteneur-accueil, .conteneur {
+.carte-restaurant__menu, .carte-restaurant, .choix-restaurants, .fonctionnement, .entete__reservation, .entete, .pied-de-page, .conteneur-accueil, .conteneur {
   display: flex;
   flex-direction: column;
 }
 
-.carte-restaurant__menu__choix__ingredient-prix, .carte-restaurant__titre, .entete-restaurant__logo, .entete-restaurant, .choix-restaurants__restaurant, .fonctionnement__menu__bouton__choix__texte, .fonctionnement__menu__bouton__choix, .fonctionnement__menu__bouton__numero, .fonctionnement__menu, .entete__logo {
+.carte-restaurant__menu__choix__detail__ingredient-prix, .carte-restaurant__menu__choix, .carte-restaurant__titre, .entete-restaurant__logo, .entete-restaurant, .choix-restaurants__restaurant, .fonctionnement__menu__bouton__choix__texte, .fonctionnement__menu__bouton__choix, .fonctionnement__menu__bouton__numero, .fonctionnement__menu, .entete__logo {
   display: flex;
   flex-direction: row;
 }
@@ -19,26 +19,37 @@ html, body {
 }
 
 .chargement {
-  position: relative;
-  z-index: 1;
-  left: 150%;
-  height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
   background: whitesmoke;
-  animation: fond 2.2s linear 1;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  animation: tran 2s linear;
+  visibility: hidden;
 }
-
-.icone-chargement {
+@keyframes tran {
+  0% {
+    visibility: visible;
+  }
+  90% {
+    visibility: visible;
+  }
+  100% {
+    visibility: hidden;
+  }
+}
+.chargement__icone-chargement {
   width: 100px;
   height: 100px;
-  border: 6px dashed blue;
-  border-top-color: yellowgreen;
+  border: 6px dashed #9356dc;
+  border-top-color: #ff79da;
   border-radius: 50%;
   animation: chargement 2s linear 1;
+  -o-animation: chargement 2s linear 1;
+  -webkit-animation: chargement 2s linear;
 }
-
 @keyframes chargement {
   0% {
     transform: rotate(0deg);
@@ -50,17 +61,7 @@ html, body {
     transform: rotate(360deg);
   }
 }
-@keyframes fond {
-  0% {
-    left: 0;
-  }
-  99% {
-    left: 0;
-  }
-  100% {
-    left: 150%;
-  }
-}
+
 .conteneur {
   margin: auto;
   overflow: hidden;
@@ -69,9 +70,19 @@ html, body {
 .conteneur-accueil {
   margin: auto;
   overflow: hidden;
-  position: absolute;
-  top: 0;
-  z-index: 0;
+  opacity: 1;
+  animation: transpa 2s linear;
+}
+@keyframes transpa {
+  0% {
+    opacity: 0;
+  }
+  90% {
+    opacity: 0.1;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 
 /******************************************** PIED DE PAGE *************************************************************************************/
@@ -300,20 +311,22 @@ html, body {
   padding-right: 15px;
   font-size: x-large;
   cursor: pointer;
-  transition: all 1s;
 }
 .choix-restaurants__restaurant__favori__coeur-vide {
-  position: relative;
-  left: 55%;
+  font-size: x-large;
 }
 .choix-restaurants__restaurant__favori__coeur-plein {
-  color: white;
-}
-.choix-restaurants__restaurant__favori:hover {
-  display: block;
-  background: -webkit-linear-gradient(#9356dc, #ff79da);
+  opacity: 0;
+  font-size: x-large;
+  background: -webkit-linear-gradient(#ff79da, #9356dc);
+  background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  transition: opacity 0.5s linear;
+  -webkit-transition: opacity 0.5s linear;
+}
+.choix-restaurants__restaurant__favori__coeur-plein:hover {
+  opacity: 1;
 }
 
 /**************************** restaurants **********************************************************************************************/
@@ -366,84 +379,87 @@ html, body {
   border-bottom: 3px solid #99e2d0;
   width: 50px;
   padding-bottom: 5px;
-  animation-duration: 4s;
-  animation-delay: -2s;
+  animation-duration: 2s;
+  -o-animation-duration: 2s;
+  -webkit-animation-duration: 2s;
+  animation-delay: -1.5s;
+  -o-animation-delay: -1.5s;
+  -webkit-animation-delay: -1.5s;
   animation-name: glissement-menu;
-}
-.carte-restaurant__menu__choix {
-  margin-bottom: 10px;
-  padding: 5px 15px;
-  border-radius: 20px;
-  background-color: white;
-  height: 70px;
-  cursor: pointer;
-}
-.carte-restaurant__menu__choix__plat {
-  font-weight: bold;
-  margin: 10px 0 0 0;
-  white-space: nowrap;
-  overflow: clip;
-  text-overflow: ellipsis;
-}
-.carte-restaurant__menu__choix__ingredient-prix {
-  justify-content: space-between;
-  margin-top: -10px;
-  /*&--valide{
-          display: none;                
-  }*/
-}
-.carte-restaurant__menu__choix__ingredient-prix__ingredient {
-  font-size: small;
-  /* @extend %ligne;
-    align-items: center;*/
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-}
-.carte-restaurant__menu__choix__ingredient-prix__prix {
-  font-weight: bold;
-  position: relative;
-  top: -10%;
-  width: 20%;
-  justify-content: right;
-  display: flex;
-}
-.carte-restaurant__menu__choix__ingredient-prix .fa-circle-check {
-  display: none;
-}
-.carte-restaurant__menu__choix:hover .carte-restaurant__menu__choix__ingredient-prix--valide {
-  display: flex;
-  background-color: #99e2d0;
-  width: 50px;
-  height: 70px;
-  margin-top: -24px;
-  margin-right: -20px;
-  border-bottom-right-radius: 20px;
-  border-top-right-radius: 20px;
-  align-items: center;
-  justify-content: center;
-  font-size: large;
-  color: white;
-}
-@keyframes valide {
-  0% {
-    transform: translateX(8px);
-  }
-  100% {
-    transform: translateX(0px);
-  }
-}
-.carte-restaurant__menu__choix .fa-circle-check {
-  display: none;
-  animation: valide 1.5s linear;
+  -o-animation-name: glissement-menu;
+  -webkit-animation-name: glissement-menu;
 }
 @keyframes glissement-menu {
   from {
     margin-bottom: 100%;
   }
   to {
-    margin-bottom: 5%;
+    margin-bottom: 0;
   }
+}
+.carte-restaurant__menu__choix {
+  margin-bottom: 10px;
+  padding: 0 0 0 15px;
+  border-radius: 20px;
+  background-color: white;
+  justify-content: space-between;
+  cursor: pointer;
+}
+.carte-restaurant__menu__choix__detail {
+  width: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.carte-restaurant__menu__choix__detail__plat {
+  font-weight: bold;
+  margin: 10px 0 0 0;
+  white-space: nowrap;
+  overflow: clip;
+  text-overflow: ellipsis;
+}
+.carte-restaurant__menu__choix__detail__ingredient-prix {
+  justify-content: space-between;
+  margin-top: -10px;
+  align-items: center;
+}
+.carte-restaurant__menu__choix__detail__ingredient-prix__ingredient {
+  font-size: small;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.carte-restaurant__menu__choix__detail__ingredient-prix__prix {
+  font-weight: bold;
+  margin-right: 15px;
+  justify-content: right;
+  display: flex;
+  width: 35px;
+}
+.carte-restaurant__menu__choix__coche {
+  width: 50%;
+  background-color: #99e2d0;
+  border-bottom-right-radius: 20px;
+  border-top-right-radius: 20px;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  animation: glissement 0.2s linear 1;
+}
+@keyframes glissement {
+  from {
+    transform: translateX(5px);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+.carte-restaurant__menu__choix__coche__valide {
+  font-size: large;
+  color: white;
+}
+.carte-restaurant__menu__choix:hover .carte-restaurant__menu__choix__coche {
+  display: flex;
 }
 .carte-restaurant__bouton {
   width: 200px;

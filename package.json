@@ -5,9 +5,9 @@
   "main": "index.js",
   "scripts": {
     "sass": "sass --watch ./sass/main.scss:./styles/styles.css ./sass/tablette.scss:./styles/tablette.css ./sass/ordinateur.scss:./styles/ordinateur.css",
-    "prefix":"postcss ./styles/styles.css --use autoprefixer -d ./styles/prefixed/"
+    "prefix":"postcss ./styles/styles.css ./styles/tablette.css ./styles/ordinateur.css --use autoprefixer -d ./styles/prefixed/"
   },
   "author": "",
   "license": "ISC",
-  "browserslist": "last 4 versions"
+  "browserslist": "last 5 versions"
 }

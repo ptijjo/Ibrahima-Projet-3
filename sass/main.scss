@@ -15,52 +15,50 @@ html, body{
     @include box-sizing;
 }
 
-.chargement{
-    
-    position: relative;
-    z-index: 1;
-    left: 150%;
-    height: 100vh;
+.chargement{  
     display: flex;
     justify-content: center;
     align-items: center;
-    background: whitesmoke;
-    animation: fond 2.2s linear 1;
+    background: whitesmoke;  
+    position: fixed; 
+    width: 100%;
+    height: 100%;
+    animation: tran 2s linear;
+    visibility: hidden;
+    @keyframes tran {
+        0%{
+            visibility: visible;          
+        }
+        90%{
+            visibility: visible;
+        }
+        100%{
+            visibility: hidden;
+        }
+    }
+    &__icone-chargement{
+        width: 100px;
+        height: 100px;
+        border: 6px dashed $couleur-primaire;
+        border-top-color: $couleur-secondaire;
+        border-radius: 50%;
+        animation: chargement 2s linear 1;
+        -o-animation: chargement 2s linear 1;
+        -webkit-animation: chargement 2s linear;
+        @keyframes chargement {
+            0%{
+                transform: rotate(0deg);
+            }
+            30%{
+                transform: rotate(260deg);
+            }
+            100%{
+                transform: rotate(360deg);
+            }    
+        }
+        } 
 }
 
-.icone-chargement{
-width: 100px;
-height: 100px;
-border: 6px dashed blue;
-border-top-color: yellowgreen;
-border-radius: 50%;
-animation: chargement 2s linear 1;
-}
-
-@keyframes chargement {
-    0%{
-        transform: rotate(0deg);
-    }
-    30%{
-        transform: rotate(260deg);
-    }
-    100%{
-        transform: rotate(360deg);
-    }    
-}
-@keyframes fond {
-    0%{
-        left:0;
-    }
-
-    99%{
-        left: 0;
-    }
-
-    100%{
-        left: 150%;
-    }
-}
 .conteneur{
     margin: auto;
     @extend %colonne;
@@ -70,9 +68,20 @@ animation: chargement 2s linear 1;
     margin: auto;
     @extend %colonne;
     overflow: hidden;
-    position: absolute;
-    top: 0;
-    z-index: 0;
+    opacity: 1;
+    animation: transpa 2s linear;
+    @keyframes transpa {
+        0%{
+            opacity: 0;
+        }
+        90%{
+            opacity: 0.1;
+        }
+        100%{
+            opacity: 1;
+        }
+        
+    }
 }
 
 
@@ -305,21 +314,23 @@ animation: chargement 2s linear 1;
             padding-right: 15px;
             font-size: x-large;  
             cursor: pointer;
-            transition: all 1s; 
             &__coeur-vide{
-                position: relative;
-                left: 55%;
-                
+                font-size: x-large;    
             }     
             &__coeur-plein{
-                color:white;
-            }                    
-            &:hover{
-                display: block;
-                background: -webkit-linear-gradient($couleur-primaire, $couleur-secondaire);
+                opacity:0;
+                font-size: x-large;
+                background: -webkit-linear-gradient($couleur-secondaire, $couleur-primaire);
+                background-clip: text;
                 -webkit-background-clip: text;
                 -webkit-text-fill-color: transparent;
-            }              
+                transition: opacity 0.5s linear;
+                -webkit-transition: opacity 0.5s linear;
+                &:hover{                
+                    opacity:1;
+                }              
+            }                    
+            
         }
     }
  }
@@ -355,16 +366,15 @@ animation: chargement 2s linear 1;
     border-top-right-radius: 25px;
     background-color: $couleur-fond;
     opacity: 99%;
-    align-items: center;
-    
+    align-items: center;    
     &__titre{
         @include police-titre-logo;
         @extend %ligne;
        align-items: center;
        margin-top: -10px;
        &__coeur{
-        margin-left: 30px;
-       }
+            margin-left: 30px;
+        }
     }
     &__menu{
         @extend %colonne;
@@ -376,93 +386,93 @@ animation: chargement 2s linear 1;
             border-bottom: 3px solid $couleur-tertiaire;
             width: 50px;
             padding-bottom: 5px;
-            animation-duration: 4s;
-            animation-delay: -2s;
+            animation-duration: 2s;
+            -o-animation-duration: 2s;
+            -webkit-animation-duration: 2s;
+            animation-delay: -1.5s;
+            -o-animation-delay: -1.5s;
+            -webkit-animation-delay: -1.5s;
             animation-name: glissement-menu;
-        }
+            -o-animation-name: glissement-menu;
+            -webkit-animation-name: glissement-menu;
+            @keyframes glissement-menu {
+                from {
+                margin-bottom: 100%;
+                }            
+                to {
+                margin-bottom: 0;
+                }
+            }
+        }        
         &__choix{
-            @extend %colonne;
+            @extend %ligne;
             margin-bottom: 10px;
-            padding: 5px 15px;
+            padding: 0 0 0 15px;
             border-radius: 20px;
             background-color: white;
-            height: 70px;
+            justify-content: space-between;
             cursor: pointer;
-            &__plat{
-                font-weight: bold;
-                margin:10px 0 0 0 ;
+            &__detail{  
+                width: 100%;    
                 white-space: nowrap;
-                overflow: clip;
-                text-overflow: ellipsis;
-            }
-            &__ingredient-prix{
-                @extend %ligne;
-                justify-content: space-between;
-                margin-top: -10px;
-                &__ingredient{
-                    font-size: small;
-                  /* @extend %ligne;
-                    align-items: center;*/
-                    white-space:nowrap;
-                    overflow:hidden;
-                    text-overflow:ellipsis;
-                }
-                &__prix{
+                overflow: hidden;
+                text-overflow: ellipsis;    
+                &__plat{
                     font-weight: bold;
-                    position: relative;
-                    top: -10%;
-                    width: 20%;
-                    justify-content: right;
-                    display: flex;
+                    margin:10px 0 0 0 ;
+                    white-space: nowrap;
+                    overflow: clip;
+                    text-overflow: ellipsis;
                 }
-                /*&--valide{
-                        display: none;                
-                }*/
-                .fa-circle-check{
-                    display: none;
-                }                
-            }
-            &:hover{
-                .carte-restaurant__menu__choix__ingredient-prix--valide{
-                    display: flex;
-                    background-color: $couleur-tertiaire;
-                    width: 50px;
-                    height: 70px;
-                    margin-top: -24px;
-                    margin-right: -20px;
-                    border-bottom-right-radius: 20px;
-                    border-top-right-radius: 20px;                    
+                &__ingredient-prix{
+                    @extend %ligne;
+                    justify-content: space-between;
+                    margin-top: -10px;
                     align-items: center;
-                    justify-content: center;                
-                    font-size: large;
-                    color: white;
-                    @keyframes valide {
-                        0%{
-                            transform: translateX(8px);
-                        }
-                        100%{
-                            transform: translateX(0px);
-                        }
-                        
+                    &__ingredient{
+                        font-size: small;
+                        white-space:nowrap;
+                        overflow:hidden;
+                        text-overflow:ellipsis;
+                    }
+                    &__prix{
+                        font-weight: bold;
+                        margin-right: 15px;
+                        justify-content: right;
+                        display: flex;
+                        width: 35px;
                     }
                 }
-            }
-            .fa-circle-check{
+            }        
+            &__coche{    
+                width: 50%;
+                background-color: $couleur-tertiaire;                   
+                border-bottom-right-radius: 20px;
+                border-top-right-radius: 20px;
                 display: none;
-                animation: valide 1.5s linear;
+                justify-content: center;
+                align-items: center;
+                animation: glissement 0.2s linear 1;
+                @keyframes glissement {
+                    from{
+                        transform: translateX(5px);
+                    }
+                    to{
+                        transform: translateX(0);
+                    }                    
+                }
+                &__valide{             
+                    font-size: large;
+                    color: white;                                                   
+                }
             }
-        }
+            &:hover{               
+                .carte-restaurant__menu__choix__coche{
+                    display: flex;  
+                }                             
+            }
+        }         
     }
-
-    @keyframes glissement-menu {
-        from {
-          margin-bottom: 100%;
-        }
-      
-        to {
-          margin-bottom: 5%;
-        }
-      }
     &__bouton{
         @include bouton-modulable(200px,50px,20px);
         background-image: linear-gradient($couleur-secondaire, $couleur-primaire);
@@ -473,7 +483,7 @@ animation: chargement 2s linear 1;
             background-image: linear-gradient($couleur-secondaire-claire, $couleur-primaire-claire);
             @include ombre(darken($couleur-ombre,20%));
         }
-
     }
 }
+
 

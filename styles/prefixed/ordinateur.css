@@ -1,0 +1,14 @@
+@media only screen and (min-width: 992px) {
+  .conteneur {
+    max-width: 1300px;
+    width: 80%;
+    margin: auto;
+  }
+  .conteneur-accueil {
+    max-width: 1200px;
+    width: 80%;
+    margin-left: 5%;
+  }
+}
+
+/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi4uLy4uL3Nhc3Mvb3JkaW5hdGV1ci5zY3NzIiwiLi4vb3JkaW5hdGV1ci5jc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7RUFFSTtJQUNJLGlCQUFBO0lBQ0EsVUFBQTtJQUNBLFlBQUE7RUNBTjtFREdFO0lBQ0ksaUJBQUE7SUFDQSxVQUFBO0lBQ0EsZUFBQTtFQ0ROO0FBQ0YiLCJmaWxlIjoib3JkaW5hdGV1ci5jc3MifQ== */
