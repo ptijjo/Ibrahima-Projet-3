@@ -138,7 +138,7 @@ html, body {
 }
 .entete__localisation__icone {
   position: relative;
-  left: 100px;
+  left: 25%;
   top: 25px;
 }
 .entete__reservation {
@@ -180,10 +180,10 @@ html, body {
 
 .fonctionnement {
   padding: 0 10px;
-  align-items: center;
-}
-.fonctionnement__titre {
-  margin-left: -150px;
+  /*align-items: center;*/
+  /*&__titre{
+      margin-left: -150px;
+  }*/
 }
 .fonctionnement__menu {
   border-radius: 15px;
@@ -258,7 +258,7 @@ html, body {
 }
 .choix-restaurants__restaurant__nouveau {
   background-color: #99e2d0;
-  width: 80px;
+  width: 70px;
   height: 20px;
   text-align: center;
   border-radius: 2px;
@@ -281,7 +281,7 @@ html, body {
 }
 .choix-restaurants__restaurant__lien__nouveau {
   background-color: #99e2d0;
-  width: 80px;
+  width: 70px;
   height: 20px;
   text-align: center;
   border-radius: 2px;

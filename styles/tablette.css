@@ -1,5 +1,8 @@
 @media only screen and (min-width: 768px) {
   /*------------------------- page d'accueil -------------------------------------*/
+  .conteneur-totale {
+    background-color: beige;
+  }
   .entete__localisation__icone {
     left: 284px;
     top: 26px;
@@ -11,17 +14,11 @@
     width: 30%;
   }
   .fonctionnement {
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
+    flex-direction: row;
+    flex-wrap: wrap;
   }
   .fonctionnement__menu {
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
+    justify-content: center;
     width: 33%;
   }
   .fonctionnement__titre {
@@ -30,15 +27,9 @@
     text-align: center;
   }
   .choix-restaurants {
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
   }
   .choix-restaurants h2 {
     width: 100%;
@@ -60,9 +51,7 @@
     margin: auto;
   }
   .carte__restaurant__menu {
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    align-items: center;
   }
   .carte__restaurant__menuchoix {
     width: 80%;
@@ -70,4 +59,4 @@
   /*--------------------- fin page restaurant -----------------------------------------------*/
 }
 
-/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi4uLy4uL3Nhc3MvdGFibGV0dGUuc2NzcyIsIi4uL3RhYmxldHRlLmNzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFPQTtFQUNvQixpRkFBQTtFQUdaO0lBQ0ksV0FBQTtJQUNBLFNBQUE7RUNSVjtFRFVNO0lBQ0ksVUFBQTtFQ1JWO0VEVU07SUFDSSxVQUFBO0VDUlY7RURXRTtJQUNJLDhCQUFBO0lBQUEsNkJBQUE7UUFBQSx1QkFBQTtZQUFBLG1CQUFBO0lBQ0EsbUJBQUE7UUFBQSxlQUFBO0VDVE47RURVTTtJQUNJLHdCQUFBO1FBQUEscUJBQUE7WUFBQSx1QkFBQTtJQUNBLFVBQUE7RUNSVjtFRFVNO0lBQ0ksY0FBQTtJQUNBLFdBQUE7SUFDQSxrQkFBQTtFQ1JWO0VEV0U7SUFDSSw4QkFBQTtJQUFBLDZCQUFBO1FBQUEsdUJBQUE7WUFBQSxtQkFBQTtJQUNBLG1CQUFBO1FBQUEsZUFBQTtJQUNBLHlCQUFBO1FBQUEsc0JBQUE7WUFBQSw4QkFBQTtFQ1ROO0VEVU07SUFDSSxXQUFBO0lBQ0Esa0JBQUE7RUNSVjtFRFVNO0lBQ0ksaUJBQUE7SUFDQSxVQUFBO0VDUlY7RURZRTtJQUNJLGtCQUFBO0lBQ0EsaUJBQUE7RUNWTjtFRFlFLDhGQUFBO0VBQ0EsOEZBQUE7RUFFQTtJQUNJLGdCQUFBO0lBQ0EsVUFBQTtJQUNBLFlBQUE7RUNYTjtFRGVNO0lBQ0kseUJBQUE7UUFBQSxzQkFBQTtZQUFBLG1CQUFBO0VDYlY7RURjVTtJQUNJLFVBQUE7RUNaZDtFRG9CRSw0RkFBQTtBQ2xCSiIsImZpbGUiOiJ0YWJsZXR0ZS5jc3MifQ== */
+/*# sourceMappingURL=tablette.css.map */

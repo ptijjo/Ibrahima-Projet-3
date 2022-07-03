@@ -143,7 +143,7 @@ html, body{
         }
         &__icone{
             position: relative;           
-            left: 100px;
+            left: 25%;
             top: 25px;       
         }
     }
@@ -163,11 +163,10 @@ html, body{
             color:white;
             background-image: linear-gradient($couleur-secondaire, $couleur-primaire);
             @include ombre($couleur-ombre);
-            border: none;            
+            border: none;       
             &:hover{
                 background-image: linear-gradient($couleur-secondaire-claire, $couleur-primaire-claire);
-                @include ombre(darken($couleur-ombre,20%));
-
+                        @include ombre(darken($couleur-ombre,20%));
             }
         }
         &__titre{
@@ -183,10 +182,10 @@ html, body{
 .fonctionnement{
     @extend %colonne;
     padding: 0 10px;
-    align-items: center;
-    &__titre{
+    /*align-items: center;*/
+    /*&__titre{
         margin-left: -150px;
-    }
+    }*/
     &__menu{
         @extend %ligne;
         border-radius: 15px;
@@ -259,7 +258,7 @@ html, body{
         width: 100%;
         &__nouveau{
             background-color: $couleur-tertiaire;
-            width: 80px;
+            width: 70px;
             height: 20px;
             text-align: center;
             border-radius: 2px;
@@ -281,7 +280,7 @@ html, body{
             }
             &__nouveau{
                 background-color: $couleur-tertiaire;
-                width: 80px;
+                width: 70px;
                 height: 20px;
                 text-align: center;
                 border-radius: 2px;

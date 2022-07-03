@@ -1,4 +1,7 @@
 @media only screen and (min-width: 992px) {
+  .conteneur-totale {
+    background-color: beige;
+  }
   .conteneur {
     max-width: 1300px;
     width: 80%;
@@ -8,6 +11,12 @@
     max-width: 1200px;
     width: 80%;
     margin-left: 5%;
+  }
+  .choix-restaurants {
+    justify-content: space-evenly;
+  }
+  .choix-restaurants__restaurant {
+    width: 40%;
   }
 }
 
