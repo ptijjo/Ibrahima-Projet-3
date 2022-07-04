@@ -465,12 +465,20 @@ html, body{
                     color: white;                                                   
                 }
             }
-            &:hover{               
+            /*&:hover{               
                 .carte-restaurant__menu__choix__coche{
                     display: flex
                 }                             
+            }*/
+        }
+        &__choix--dessert, &__choix--plats, &__choix--entree{
+            &:hover{
+                .carte-restaurant__menu__choix__coche--dessert, .carte-restaurant__menu__choix__coche--plats, .carte-restaurant__menu__choix__coche--entree{
+                    display: flex
+                 }
             }
-        }         
+        }
+        
     }
     &__bouton{
         @include bouton-modulable(200px,50px,20px);
