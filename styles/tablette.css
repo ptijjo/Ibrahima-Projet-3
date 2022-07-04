@@ -14,11 +14,17 @@
     width: 30%;
   }
   .fonctionnement {
-    flex-direction: row;
-    flex-wrap: wrap;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
   }
   .fonctionnement__menu {
-    justify-content: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
     width: 33%;
   }
   .fonctionnement__titre {
@@ -27,9 +33,15 @@
     text-align: center;
   }
   .choix-restaurants {
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-between;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
   }
   .choix-restaurants h2 {
     width: 100%;
@@ -51,7 +63,9 @@
     margin: auto;
   }
   .carte__restaurant__menu {
-    align-items: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
   }
   .carte__restaurant__menuchoix {
     width: 80%;
@@ -59,4 +73,4 @@
   /*--------------------- fin page restaurant -----------------------------------------------*/
 }
 
-/*# sourceMappingURL=tablette.css.map */
+/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi4uLy4uL3Nhc3MvdGFibGV0dGUuc2NzcyIsIi4uL3RhYmxldHRlLmNzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFPQTtFQUNvQixpRkFBQTtFQUVoQjtJQUNJLHVCQUFBO0VDUE47RURVTTtJQUNJLFdBQUE7SUFDQSxTQUFBO0VDUlY7RURVTTtJQUNJLFVBQUE7RUNSVjtFRFVNO0lBQ0ksVUFBQTtFQ1JWO0VEV0U7SUFDSSw4QkFBQTtJQUFBLDZCQUFBO1FBQUEsdUJBQUE7WUFBQSxtQkFBQTtJQUNBLG1CQUFBO1FBQUEsZUFBQTtFQ1ROO0VEVU07SUFDSSx3QkFBQTtRQUFBLHFCQUFBO1lBQUEsdUJBQUE7SUFDQSxVQUFBO0VDUlY7RURVTTtJQUNJLGNBQUE7SUFDQSxXQUFBO0lBQ0Esa0JBQUE7RUNSVjtFRFdFO0lBQ0ksOEJBQUE7SUFBQSw2QkFBQTtRQUFBLHVCQUFBO1lBQUEsbUJBQUE7SUFDQSxtQkFBQTtRQUFBLGVBQUE7SUFDQSx5QkFBQTtRQUFBLHNCQUFBO1lBQUEsOEJBQUE7RUNUTjtFRFVNO0lBQ0ksV0FBQTtJQUNBLGtCQUFBO0VDUlY7RURVTTtJQUNJLGlCQUFBO0lBQ0EsVUFBQTtFQ1JWO0VEWUU7SUFDSSxrQkFBQTtJQUNBLGlCQUFBO0VDVk47RURZRSw4RkFBQTtFQUNBLDhGQUFBO0VBRUE7SUFDSSxnQkFBQTtJQUNBLFVBQUE7SUFDQSxZQUFBO0VDWE47RURlTTtJQUNJLHlCQUFBO1FBQUEsc0JBQUE7WUFBQSxtQkFBQTtFQ2JWO0VEY1U7SUFDSSxVQUFBO0VDWmQ7RURvQkUsNEZBQUE7QUNsQkoiLCJmaWxlIjoidGFibGV0dGUuY3NzIn0= */

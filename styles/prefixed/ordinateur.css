@@ -1,4 +1,7 @@
 @media only screen and (min-width: 992px) {
+  .conteneur-totale {
+    background-color: beige;
+  }
   .conteneur {
     max-width: 1300px;
     width: 80%;
@@ -9,6 +12,14 @@
     width: 80%;
     margin-left: 5%;
   }
+  .choix-restaurants {
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+  }
+  .choix-restaurants__restaurant {
+    width: 40%;
+  }
 }
 
-/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi4uLy4uL3Nhc3Mvb3JkaW5hdGV1ci5zY3NzIiwiLi4vb3JkaW5hdGV1ci5jc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7RUFFSTtJQUNJLGlCQUFBO0lBQ0EsVUFBQTtJQUNBLFlBQUE7RUNBTjtFREdFO0lBQ0ksaUJBQUE7SUFDQSxVQUFBO0lBQ0EsZUFBQTtFQ0ROO0FBQ0YiLCJmaWxlIjoib3JkaW5hdGV1ci5jc3MifQ== */
+/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi4uLy4uL3Nhc3Mvb3JkaW5hdGV1ci5zY3NzIiwiLi4vb3JkaW5hdGV1ci5jc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7RUFDSTtJQUNJLHVCQUFBO0VDQ047RURDRTtJQUNJLGlCQUFBO0lBQ0EsVUFBQTtJQUNBLFlBQUE7RUNDTjtFREVFO0lBQ0ksaUJBQUE7SUFDQSxVQUFBO0lBQ0EsZUFBQTtFQ0FOO0VER0U7SUFDSSw4QkFBQTtRQUFBLDJCQUFBO1lBQUEsNkJBQUE7RUNETjtFREVNO0lBQ0ksVUFBQTtFQ0FWO0FBQ0YiLCJmaWxlIjoib3JkaW5hdGV1ci5jc3MifQ== */
