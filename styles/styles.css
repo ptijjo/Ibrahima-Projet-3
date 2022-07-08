@@ -402,11 +402,6 @@ html, body {
   background-color: white;
   justify-content: space-between;
   cursor: pointer;
-  /*&:hover{               
-      .carte-restaurant__menu__choix__coche{
-          display: flex
-      }                             
-  }*/
 }
 .carte-restaurant__menu__choix__detail {
   width: 100%;
