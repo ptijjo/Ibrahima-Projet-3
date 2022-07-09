@@ -80,6 +80,9 @@ html, body {
   90% {
     opacity: 0.1;
   }
+  98% {
+    opacity: 0.3;
+  }
   100% {
     opacity: 1;
   }
@@ -146,7 +149,7 @@ html, body {
   align-items: center;
   background-color: #F6F6F6;
   padding: 30px 20px 40px 20px;
-  margin-bottom: 10px;
+  /*margin-bottom: 10px;*/
 }
 .entete__reservation__texte {
   color: #777777;
@@ -273,7 +276,7 @@ html, body {
 .choix-restaurants__restaurant__lien__image {
   width: 100%;
   height: 234px;
-  object-fit: fill;
+  object-fit: cover;
   border-top-left-radius: 25px;
   border-top-right-radius: 25px;
 }
@@ -292,7 +295,7 @@ html, body {
 .choix-restaurants__restaurant__image {
   width: 100%;
   height: 234px;
-  object-fit: fill;
+  object-fit: cover;
   border-top-left-radius: 25px;
   border-top-right-radius: 25px;
 }
@@ -306,25 +309,29 @@ html, body {
   margin-top: -15px;
 }
 .choix-restaurants__restaurant__favori {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   padding-right: 15px;
-  font-size: x-large;
-  cursor: pointer;
+  font-size: 1.5rem;
 }
 .choix-restaurants__restaurant__favori__coeur-vide {
-  font-size: x-large;
+  position: relative;
 }
 .choix-restaurants__restaurant__favori__coeur-plein {
-  opacity: 0;
-  font-size: x-large;
-  background: -webkit-linear-gradient(#ff79da, #9356dc);
-  background-clip: text;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  transition: opacity 0.5s linear;
-  -webkit-transition: opacity 0.5s linear;
+  position: absolute;
+  color: white;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: 1s linear;
 }
 .choix-restaurants__restaurant__favori__coeur-plein:hover {
-  opacity: 1;
+  color: #9356dc;
+  background: -webkit-linear-gradient(#ff79da, #9356dc);
+  -webkit-background-clip: text;
+  background-clip: text;
+  font-size: 1.5rem;
+  transition: 1s linear;
 }
 
 /**************************** restaurants **********************************************************************************************/
@@ -332,6 +339,9 @@ html, body {
   justify-content: flex-start;
   align-items: center;
   padding-left: 30px;
+}
+.entete-restaurant__bouton {
+  color: black;
 }
 .entete-restaurant__logo {
   justify-content: center;
@@ -377,22 +387,16 @@ html, body {
   border-bottom: 3px solid #99e2d0;
   width: 50px;
   padding-bottom: 5px;
-  animation-duration: 2s;
-  -o-animation-duration: 2s;
-  -webkit-animation-duration: 2s;
-  animation-delay: -1.5s;
-  -o-animation-delay: -1.5s;
-  -webkit-animation-delay: -1.5s;
-  animation-name: glissement-menu;
-  -o-animation-name: glissement-menu;
-  -webkit-animation-name: glissement-menu;
+  animation: glissement-menu 2s ease-in-out;
+  -o-animation: glissement-menu 2s ease-in-out;
+  -webkit-animation: glissement-menu 2s ease-in-out;
 }
 @keyframes glissement-menu {
   from {
     margin-bottom: 100%;
   }
   to {
-    margin-bottom: 0;
+    margin-bottom: 6%;
   }
 }
 .carte-restaurant__menu__choix {

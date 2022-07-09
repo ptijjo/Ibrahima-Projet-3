@@ -77,6 +77,9 @@ html, body{
         90%{
             opacity: 0.1;
         }
+        98%{
+            opacity:0.3;
+        }
         100%{
             opacity: 1;
         }
@@ -129,8 +132,7 @@ html, body{
             object-fit: contain;
         }
     }
-    &__localisation{
-        
+    &__localisation{       
         
         &__recherche{
             width: 100%;
@@ -154,7 +156,7 @@ html, body{
         align-items: center;
         background-color: $couleur-fond;
         padding: 30px 20px 40px 20px;
-        margin-bottom: 10px;
+        /*margin-bottom: 10px;*/
         &__texte{
             color: darken($couleur-fond, 50%);
         }
@@ -235,8 +237,7 @@ html, body{
             &:hover{
                 background-color: lighten($couleur-primaire, 32%);
             }
-        }
-        
+        }       
         
     }   
 }
@@ -272,7 +273,7 @@ html, body{
             &__image{
                 width: 100%;
                 height: 234px;
-                object-fit: fill;
+                object-fit: cover;
                 border-top-left-radius: 25px;
                 border-top-right-radius: 25px;           
             }
@@ -292,7 +293,7 @@ html, body{
         &__image{
             width: 100%;
             height: 234px;
-            object-fit: fill;
+            object-fit: cover;
             border-top-left-radius: 25px;
             border-top-right-radius: 25px;           
         }
@@ -300,34 +301,36 @@ html, body{
         &__legende{
             padding: 0px 15px;
             &__lieu{
-                margin-top: 0px;
-                
+                margin-top: 0px;                
             }
             &__lieu{
                 margin-top: -15px;
             }
         }
         &__favori{
+            display:flex;
+            justify-content:center;
+            align-items:center;
             padding-right: 15px;
-            font-size: x-large;  
-            cursor: pointer;
+            font-size: 1.5rem;  
             &__coeur-vide{
-                font-size: x-large;    
+                position:relative;    
             }     
             &__coeur-plein{
-                opacity:0;
-                font-size: x-large;
-                background: -webkit-linear-gradient($couleur-secondaire, $couleur-primaire);
-                background-clip: text;
-                -webkit-background-clip: text;
-                -webkit-text-fill-color: transparent;
-                transition: opacity 0.5s linear;
-                -webkit-transition: opacity 0.5s linear;
-                &:hover{                
-                    opacity:1;
-                }              
-            }                    
-            
+                position:absolute;
+                color:white;
+                font-size:1rem;
+                cursor: pointer;
+                transition: 1s linear;   
+                &:hover{  
+                    color:#9356dc;;
+                    background: -webkit-linear-gradient(#ff79da, #9356dc);      
+                    -webkit-background-clip: text; 
+                    background-clip: text; 
+                    font-size:1.5rem;
+                    transition: 1s linear;
+                  }                 
+            }                        
         }
     }
  }
@@ -337,6 +340,9 @@ html, body{
     justify-content: flex-start;
     align-items: center;
     padding-left: 30px;
+    &__bouton{
+        color: black;
+    }
     &__logo{
         @extend %ligne;
         justify-content: center;
@@ -383,21 +389,16 @@ html, body{
             border-bottom: 3px solid $couleur-tertiaire;
             width: 50px;
             padding-bottom: 5px;
-            animation-duration: 2s;
-            -o-animation-duration: 2s;
-            -webkit-animation-duration: 2s;
-            animation-delay: -1.5s;
-            -o-animation-delay: -1.5s;
-            -webkit-animation-delay: -1.5s;
-            animation-name: glissement-menu;
-            -o-animation-name: glissement-menu;
-            -webkit-animation-name: glissement-menu;
+            animation: glissement-menu 2s ease-in-out;
+            -o-animation: glissement-menu 2s ease-in-out;
+            -webkit-animation: glissement-menu 2s ease-in-out;
+            
             @keyframes glissement-menu {
                 from {
                 margin-bottom: 100%;
                 }            
                 to {
-                margin-bottom: 0;
+                margin-bottom: 6%;
                 }
             }
         }        
