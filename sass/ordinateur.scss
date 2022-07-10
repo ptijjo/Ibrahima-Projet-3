@@ -1,24 +1,37 @@
+
+@import "./utils/variables";
+@import "./Utils/mixins";
+@import "./Utils/placeholders";
+
+@import "./Base/polices";
+@import "./Base/box-sizing";
+
+@import "./Composants/boutons";
+@import "./Composants/chargement";
+@import "./Composants/cartes";
+
+@import "./Pages/index";
+
+@import "./Layout/footer";
+@import "./Layout/navigation";
+@import "./Layout/header";
+@import "./Layout/conteneur";
+
 @media only screen and (min-width:992px){
    
     .conteneur{
-        max-width: 1300px;
-        width: 80%;
-        margin: auto;
+      @include conteneur-ordinateur;
         
     }
     .conteneur-accueil{
-        max-width: 1200px;
-        width: 80%;
-        /*margin-left: 5%;*/
+       @include conteneur-accueil-ordinateur;
+    
     }
     .entete-restaurant__logo{
-        margin-left: 40%;
+        @include entete-restaurant-ordinateur;
     }
 
     .choix-restaurants{
-        justify-content: space-evenly;
-        &__restaurant{
-            width: 40%;
-        }
+        @include carte-restaurant-ordinateur;
     }
 }

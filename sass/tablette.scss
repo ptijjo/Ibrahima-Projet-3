@@ -1,72 +1,45 @@
 @import "./utils/variables";
 @import "./Utils/mixins";
-@import "./Base/polices";
-@import "./Base/box-sizing";
-@import "./Composants/boutons";
 @import "./Utils/placeholders";
 
+@import "./Base/polices";
+@import "./Base/box-sizing";
+
+@import "./Composants/boutons";
+@import "./Composants/chargement";
+@import "./Composants/cartes";
+
+@import "./Pages/index";
+
+@import "./Layout/footer";
+@import "./Layout/navigation";
+@import "./Layout/header";
+@import "./Layout/conteneur";
 @media only screen and (min-width:768px){
                     /*------------------------- page d'accueil -------------------------------------*/
    
     .entete{
-        &__localisation__icone{
-            left:284px;
-            top: 26px;
-        }
-        &__reservation__titre{
-            width: 60%;
-        }
-        &__reservation__bouton-explorer{
-            width: 30%;
-        }
+       @include entete-tablette;
     }
     .fonctionnement{
-        flex-direction: row;
-        flex-wrap: wrap;
-        &__menu{
-            justify-content: center;
-            width: 33%;
-        }
-        &__titre{
-            margin-left: 0;
-            width: 100%;
-            text-align: center;
-        }
+       @include navigation-tablette;
     }
     .choix-restaurants{
-        flex-direction: row;
-        flex-wrap: wrap;
-        justify-content: space-between;
-        & h2{
-            width: 100%;
-            text-align: center;
-        }
-        &__restaurant{
-            margin-right: 0px;
-            width: 48%;
-        }
+       @include carte-tablette;
     }
 
     .pied-de-page{
-        text-align: center;
-        padding-top: 20px;
+        @include pied-tablette;
     }
     /*---------------------- fin page d'accueil -------------------------------------------------*/
     /*----------------------- page restaurant ---------------------------------------------------*/
 
     .conteneur{
-        max-width: 900px;
-        width: 90%;
-        margin: auto;
+       @include conteneur-tablette;
         
     }
     .carte__restaurant{
-        &__menu{
-            align-items: center;
-            &choix{
-                width: 80%;
-            }
-        }
+       @include carte-restaurant-tablette;
     }
     
 

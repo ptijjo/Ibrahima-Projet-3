@@ -1,0 +1,251 @@
+@mixin carte-accueil{
+    @extend %colonne;
+    padding: 0 10px 60px 10px;
+    background-color:$couleur-fond;
+    width: 100%;
+   &__restaurant{
+       @extend %ligne;
+       flex-wrap: wrap;
+       justify-content: space-between;
+       align-items: center;
+       border-radius: 25px; 
+       margin-bottom: 15px;  
+       background-color: white;  
+       width: 100%;
+       &__nouveau{
+           background-color: $couleur-tertiaire;
+           width: 70px;
+           height: 20px;
+           text-align: center;
+           border-radius: 2px;
+           position: relative;
+           left: 70%;
+           top: 60px;
+           color: darken($couleur-tertiaire, 40%);
+           margin-top: -35px;
+       }
+       &__lien{  
+           text-decoration: none;  
+           width: 100%; 
+           &__image{
+               width: 100%;
+               height: 234px;
+               object-fit: cover;
+               border-top-left-radius: 25px;
+               border-top-right-radius: 25px;           
+           }
+           &__nouveau{
+               background-color: $couleur-tertiaire;
+               width: 70px;
+               height: 20px;
+               text-align: center;
+               border-radius: 2px;
+               position: relative;
+               left: 70%;
+               top: 60px;
+               color: darken($couleur-tertiaire, 40%);
+               margin-top: -35px;
+           }
+       }
+       &__image{
+           width: 100%;
+           height: 234px;
+           object-fit: cover;
+           border-top-left-radius: 25px;
+           border-top-right-radius: 25px;         
+       }
+       &__image--francaise{
+        object-position: 50% bottom;
+       }
+       &__image--delice{
+        object-position: 50% bottom;
+       }
+       
+       
+       &__legende{
+           padding: 0px 15px;
+           &__lieu{
+               margin-top: 0px;                
+           }
+           &__lieu{
+               margin-top: -15px;
+           }
+       }
+       &__favori{
+           display:flex;
+           justify-content:center;
+           align-items:center;
+           padding-right: 15px;
+           font-size: 1.5rem;  
+           &__coeur-vide{
+               position:relative;    
+           }     
+           &__coeur-plein{
+               position:absolute;
+               color:white;
+               font-size:1rem;
+               cursor: pointer;
+               transition: 1s linear;   
+               &:hover{  
+                   color:#9356dc;;
+                   background: -webkit-linear-gradient(#ff79da, #9356dc);      
+                   -webkit-background-clip: text; 
+                   background-clip: text; 
+                   font-size:1.5rem;
+                   transition: 1s linear;
+                 }                 
+           }                        
+       }
+   }
+}
+
+@mixin carte-tablette{
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    & h2{
+        width: 100%;
+        text-align: center;
+    }
+    &__restaurant{
+        margin-right: 0px;
+        width: 48%;
+    }
+}
+
+@mixin carte-restaurant{
+    @extend %colonne;
+    padding: 15px 15px;
+    margin-top: -20px;
+    border-top-left-radius: 25px;
+    border-top-right-radius: 25px;
+    background-color: $couleur-fond;
+    opacity: 99%;
+    align-items: center;    
+    &__titre{
+        @include police-titre-logo;
+        @extend %ligne;
+       align-items: center;
+       margin-top: -10px;
+       &__coeur{
+            margin-left: 30px;
+        }
+    }
+    &__menu{
+        @extend %colonne;
+        margin-top: -30px;
+        margin-bottom: 30px;
+        width: 100%;
+        &__titre{
+            font-size: 1.2rem;
+            border-bottom: 3px solid $couleur-tertiaire;
+            width: 50px;
+            padding-bottom: 5px;
+            animation: glissement-menu 2s ease-in-out;
+            -o-animation: glissement-menu 2s ease-in-out;
+            -webkit-animation: glissement-menu 2s ease-in-out;
+            
+            @keyframes glissement-menu {
+                from {
+                margin-bottom: 100%;
+                }            
+                to {
+                margin-bottom: 6%;
+                }
+            }
+        }        
+        &__choix{
+            @extend %ligne;
+            margin-bottom: 10px;
+            padding: 0 0 0 15px;
+            border-radius: 20px;
+            background-color: white;
+            justify-content: space-between;
+            cursor: pointer;
+            &__detail{  
+                width: 100%;    
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis;    
+                &__plat{
+                    font-weight: bold;
+                    margin:10px 0 0 0 ;
+                    white-space: nowrap;
+                    overflow: clip;
+                    text-overflow: ellipsis;
+                }
+                &__ingredient-prix{
+                    @extend %ligne;
+                    justify-content: space-between;
+                    margin-top: -10px;
+                    align-items: center;
+                    &__ingredient{
+                        font-size: small;
+                        white-space:nowrap;
+                        overflow:hidden;
+                        text-overflow:ellipsis;
+                    }
+                    &__prix{
+                        font-weight: bold;
+                        margin-right: 15px;
+                        justify-content: right;
+                        display: flex;
+                        width: 35px;
+                    }
+                }
+            }        
+            &__coche{    
+                width: 50%;
+                background-color: $couleur-tertiaire;                   
+                border-bottom-right-radius: 20px;
+                border-top-right-radius: 20px;
+                display: none;
+                justify-content: center;
+                align-items: center;
+                animation: glissement 0.2s linear 1;
+                @keyframes glissement {
+                    from{
+                        transform: translateX(5px);
+                    
+                    }
+                    to{
+                        transform: translateX(0);
+                        
+                    }                 
+                }
+                &__valide{             
+                    font-size: large;
+                    color: white;                                                   
+                }
+            }
+           
+        }
+        &__choix--dessert, &__choix--plats, &__choix--entree{
+            &:hover{
+                .carte-restaurant__menu__choix__coche--dessert, .carte-restaurant__menu__choix__coche--plats, .carte-restaurant__menu__choix__coche--entree{
+                    display: flex
+                 }
+            }
+        }
+    }
+}
+/*xxxxxxxxxxxxxxxxx TABLETTE xxxxxxxxxxxxxxxxxxxxxxxxxxxxx*/
+@mixin carte-restaurant-tablette{
+    &__menu{
+        align-items: center;
+        &choix{
+            width: 80%;
+        }
+    }
+}
+
+/*xxxxxxxxxxxxxxxxxxxxxxxxxxxxx ORDINATEUR xxxxxxxxxxxxxxxxxxxxxxxxx*/
+@mixin carte-restaurant-ordinateur{
+    justify-content: space-evenly;
+        &__restaurant{
+            width: 40%;
+        }
+}
+
+
+

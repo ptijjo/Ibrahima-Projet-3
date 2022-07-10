@@ -1,0 +1,109 @@
+@mixin entete {
+    @extend %colonne;
+    justify-content: center;
+    &__logo{
+        @extend %ligne;
+        justify-content: center;
+        padding-top: 10px;
+        &__image{
+            width: 60%;
+            height: 45px;
+            object-fit: contain;
+        }
+    }
+    &__localisation{       
+        
+        &__recherche{
+            width: 100%;
+            height: 35px;
+            background-color: darken($couleur-fond, 10%);
+            text-align: center;
+            border-bottom: 2px;
+            border-left: none;
+            border-right: none;
+        }
+        &__icone{
+            position: relative;           
+            left: 25%;
+            top: 25px;       
+        }
+    }
+
+    &__reservation{
+        @extend %colonne;
+        text-align: center;
+        align-items: center;
+        background-color: $couleur-fond;
+        padding: 30px 20px 40px 20px;
+        &__texte{
+            color: darken($couleur-fond, 50%);
+        }
+        &__bouton-explorer{
+            @include bouton-modulable(60%,50px,25px);
+            color:white;
+            background-image: linear-gradient($couleur-secondaire, $couleur-primaire);
+            @include ombre($couleur-ombre);
+            border: none;   
+            transition: background-image 0.5s, box-shadow 0.5s ;    
+            &:hover{
+                background-image: linear-gradient($couleur-secondaire-claire, $couleur-primaire-claire);
+                        @include ombre(darken($couleur-ombre,20%));
+            }
+        }
+        &__titre{
+          margin-bottom: 0;
+          font-size: x-large;
+          width: 250px;
+        }
+        &__titre{
+          margin-top: 5px;
+        }      
+    }
+}
+
+@mixin entete-restaurant{
+    @extend %ligne;
+    justify-content: flex-start;
+    align-items: center;
+    padding-left: 30px;
+    &__bouton{
+        color: black;
+    }
+    &__logo{
+        @extend %ligne;
+        justify-content: center;
+        margin-left: 20%;
+        &__image{
+            width: 200px;
+            height: 50px;
+            object-fit: contain;
+        }
+    }
+
+    .image-de-fond{
+        width: 100%;
+        height: auto;
+        object-fit: contain;
+    }
+}
+
+/*xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx TABLETTE xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx*/
+
+@mixin entete-tablette{
+    &__localisation__icone{
+        left:284px;
+        top: 26px;
+    }
+    &__reservation__titre{
+        width: 60%;
+    }
+    &__reservation__bouton-explorer{
+        width: 30%;
+    }
+}
+
+
+/*xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx ORDINATEUR xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx*/
+@mixin entete-restaurant-ordinateur{
+    margin-left: 40%;
+}

@@ -1,0 +1,73 @@
+@mixin navigation{
+    @extend %colonne;
+    padding: 0 10px;
+    &__menu{
+        @extend %ligne;
+        border-radius: 15px;
+        padding: 0 15px;
+        margin-bottom: 20px;
+        width: 100%;
+        &__bouton{
+            @include bouton;           
+            @include ombre(darken($couleur-fond,10%));
+            background-color: lighten($couleur-fond,1%);
+            transition: background-color 0.5s, box-shadow 0.5s;
+            &__numero{
+                width: 20px;
+                height: 20px;
+                border-radius: 50px;
+                background-color: $couleur-primaire;
+                color: white;
+                @extend %ligne;
+                align-items: center;
+                justify-content: center;
+                margin: 0 20px 0 -15px;
+            }
+            &__choix{
+                width: 80%;
+                @extend %ligne;
+                align-items: center;
+                text-align: center;
+                justify-content: space-around;
+                &__texte{
+                    margin-left: 15px;
+                    width: 220px;
+                    @extend %ligne;
+                    justify-content: flex-start;
+                }
+                &--couleur-primaire{
+                    color:$couleur-primaire;
+                }
+                &--couleur-fond{
+                    color: darken($couleur-fond, 40%);
+                }
+            } 
+            &:hover{
+                @include ombre(darken($couleur-fond,20%));
+                background-color: lighten($couleur-fond,2%);
+            }               
+        }
+        &__bouton--couleur{
+            background-color: lighten($couleur-primaire, 30%);
+            &:hover{
+                background-color: lighten($couleur-primaire, 32%);
+            }
+        }       
+        
+    }   
+}
+
+@mixin navigation-tablette
+{
+    flex-direction: row;
+    flex-wrap: wrap;
+    &__menu{
+        justify-content: center;
+        width: 33%;
+    }
+    &__titre{
+        margin-left: 0;
+        width: 100%;
+        text-align: center;
+    }
+}

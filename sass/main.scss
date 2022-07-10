@@ -1,9 +1,20 @@
 @import "./utils/variables";
 @import "./Utils/mixins";
+@import "./Utils/placeholders";
+
 @import "./Base/polices";
 @import "./Base/box-sizing";
+
 @import "./Composants/boutons";
-@import "./Utils/placeholders";
+@import "./Composants/chargement";
+@import "./Composants/cartes";
+
+@import "./Pages/index";
+
+@import "./Layout/footer";
+@import "./Layout/navigation";
+@import "./Layout/header";
+@import "./Layout/conteneur";
 
 html, body{
     padding: 0;
@@ -16,471 +27,51 @@ html, body{
 }
 
 .chargement{  
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background: whitesmoke;  
-    position: fixed; 
-    width: 100%;
-    height: 100%;
-    animation: tran 2s linear;
-    visibility: hidden;
-    @keyframes tran {
-        0%{
-            visibility: visible;          
-        }
-        90%{
-            visibility: visible;
-        }
-        100%{
-            visibility: hidden;
-        }
-    }
+    @include chargement-page;
+    
     &__icone-chargement{
-        width: 100px;
-        height: 100px;
-        border: 6px dashed $couleur-primaire;
-        border-top-color: $couleur-secondaire;
-        border-radius: 50%;
-        animation: chargement 2s linear 1;
-        -o-animation: chargement 2s linear 1;
-        -webkit-animation: chargement 2s linear;
-        @keyframes chargement {
-            0%{
-                transform: rotate(0deg);
-            }
-            30%{
-                transform: rotate(260deg);
-            }
-            100%{
-                transform: rotate(360deg);
-            }    
-        }
-        } 
+        @include icone-du-chargement;        
+    }
 }
 
 .conteneur{
-    margin: auto;
-    @extend %colonne;
-    overflow: hidden;
+    @include conteneur;
 }
 .conteneur-accueil{
-    margin: auto;
-    @extend %colonne;
-    overflow: hidden;
-    opacity: 1;
-    animation: transpa 2s linear;
-    @keyframes transpa {
-        0%{
-            opacity: 0;
-        }
-        90%{
-            opacity: 0.1;
-        }
-        98%{
-            opacity:0.3;
-        }
-        100%{
-            opacity: 1;
-        }
-        
-    }
+   @include conteneur-accueil;
 }
 
 
 /******************************************** PIED DE PAGE *************************************************************************************/
 .pied-de-page{
-    @extend %colonne;
-    padding: 15px;
-    background-color: darken($couleur-fond, 75%);
-    color: white;
-    &__titre{
-        @include police-titre-logo;
-        margin: 0;
-    }
-    &__elements{
-        list-style-type: none;
-        padding-left: 0;
-        margin-top: 10px;
-        &__lien{
-            text-decoration: none;
-            color: white;
-            &__item{
-                margin-bottom: 10px;
-                &__nom{
-                    margin-left: 5px;
-                    &--long{
-                        margin-left: 10px;
-                    }
-                }
-
-            }
-        }
-    }
+   @include pied;
 }
 /************************************************ Accueil ************************************************************************************/
 .entete{
-    @extend %colonne;
-    justify-content: center;
-    &__logo{
-        @extend %ligne;
-        justify-content: center;
-        padding-top: 10px;
-        &__image{
-            width: 60%;
-            height: 45px;
-            object-fit: contain;
-        }
-    }
-    &__localisation{       
-        
-        &__recherche{
-            width: 100%;
-            height: 35px;
-            background-color: darken($couleur-fond, 10%);
-            text-align: center;
-            border-bottom: 2px;
-            border-left: none;
-            border-right: none;
-        }
-        &__icone{
-            position: relative;           
-            left: 25%;
-            top: 25px;       
-        }
-    }
-
-    &__reservation{
-        @extend %colonne;
-        text-align: center;
-        align-items: center;
-        background-color: $couleur-fond;
-        padding: 30px 20px 40px 20px;
-        /*margin-bottom: 10px;*/
-        &__texte{
-            color: darken($couleur-fond, 50%);
-        }
-        &__bouton-explorer{
-            @include bouton-modulable(60%,50px,25px);
-            color:white;
-            background-image: linear-gradient($couleur-secondaire, $couleur-primaire);
-            @include ombre($couleur-ombre);
-            border: none;   
-            transition: background-image 0.5s, box-shadow 0.5s ;    
-            &:hover{
-                background-image: linear-gradient($couleur-secondaire-claire, $couleur-primaire-claire);
-                        @include ombre(darken($couleur-ombre,20%));
-            }
-        }
-        &__titre{
-          margin-bottom: 0;
-          font-size: x-large;
-          width: 250px;
-        }
-        &__titre{
-          margin-top: 5px;
-        }      
-    }
+   @include entete;
 }
 .fonctionnement{
-    @extend %colonne;
-    padding: 0 10px;
-    &__menu{
-        @extend %ligne;
-        border-radius: 15px;
-        padding: 0 15px;
-        margin-bottom: 20px;
-        width: 100%;
-        &__bouton{
-            @include bouton;           
-            @include ombre(darken($couleur-fond,10%));
-            background-color: lighten($couleur-fond,1%);
-            border: none;
-            transition: background-color 0.5s, box-shadow 0.5s;
-            &__numero{
-                width: 20px;
-                height: 20px;
-                border-radius: 50px;
-                background-color: $couleur-primaire;
-                color: white;
-                @extend %ligne;
-                align-items: center;
-                justify-content: center;
-                margin: 0 20px 0 -15px;
-            }
-            &__choix{
-                width: 80%;
-                @extend %ligne;
-                align-items: center;
-                text-align: center;
-                justify-content: space-around;
-                &__texte{
-                    margin-left: 15px;
-                    width: 220px;
-                    @extend %ligne;
-                    justify-content: flex-start;
-                }
-                &--couleur-primaire{
-                    color:$couleur-primaire;
-                }
-                &--couleur-fond{
-                    color: darken($couleur-fond, 40%);
-                }
-            } 
-            &:hover{
-                @include ombre(darken($couleur-fond,20%));
-                background-color: lighten($couleur-fond,2%);
-            }               
-        }
-        &__bouton--couleur{
-            background-color: lighten($couleur-primaire, 30%);
-            &:hover{
-                background-color: lighten($couleur-primaire, 32%);
-            }
-        }       
-        
-    }   
-}
-.choix-restaurants{
-     @extend %colonne;
-     padding: 0 10px 60px 10px;
-     background-color:$couleur-fond;
-     width: 100%;
-    &__restaurant{
-        @extend %ligne;
-        flex-wrap: wrap;
-        justify-content: space-between;
-        align-items: center;
-        border-radius: 25px; 
-        margin-bottom: 15px;  
-        background-color: white;  
-        width: 100%;
-        &__nouveau{
-            background-color: $couleur-tertiaire;
-            width: 70px;
-            height: 20px;
-            text-align: center;
-            border-radius: 2px;
-            position: relative;
-            left: 70%;
-            top: 60px;
-            color: darken($couleur-tertiaire, 40%);
-            margin-top: -35px;
-        }
-        &__lien{  
-            text-decoration: none;  
-            width: 100%; 
-            &__image{
-                width: 100%;
-                height: 234px;
-                object-fit: cover;
-                border-top-left-radius: 25px;
-                border-top-right-radius: 25px;           
-            }
-            &__nouveau{
-                background-color: $couleur-tertiaire;
-                width: 70px;
-                height: 20px;
-                text-align: center;
-                border-radius: 2px;
-                position: relative;
-                left: 70%;
-                top: 60px;
-                color: darken($couleur-tertiaire, 40%);
-                margin-top: -35px;
-            }
-        }
-        &__image{
-            width: 100%;
-            height: 234px;
-            object-fit: cover;
-            border-top-left-radius: 25px;
-            border-top-right-radius: 25px;           
-        }
-        
-        &__legende{
-            padding: 0px 15px;
-            &__lieu{
-                margin-top: 0px;                
-            }
-            &__lieu{
-                margin-top: -15px;
-            }
-        }
-        &__favori{
-            display:flex;
-            justify-content:center;
-            align-items:center;
-            padding-right: 15px;
-            font-size: 1.5rem;  
-            &__coeur-vide{
-                position:relative;    
-            }     
-            &__coeur-plein{
-                position:absolute;
-                color:white;
-                font-size:1rem;
-                cursor: pointer;
-                transition: 1s linear;   
-                &:hover{  
-                    color:#9356dc;;
-                    background: -webkit-linear-gradient(#ff79da, #9356dc);      
-                    -webkit-background-clip: text; 
-                    background-clip: text; 
-                    font-size:1.5rem;
-                    transition: 1s linear;
-                  }                 
-            }                        
-        }
-    }
+    @include navigation;
  }
+/*************************************** cartes ***********************************************************************************/
+
+.choix-restaurants{
+    @include carte-accueil;
+}
+
+
 /**************************** restaurants **********************************************************************************************/
 .entete-restaurant{
-    @extend %ligne;
-    justify-content: flex-start;
-    align-items: center;
-    padding-left: 30px;
-    &__bouton{
-        color: black;
-    }
-    &__logo{
-        @extend %ligne;
-        justify-content: center;
-        margin-left: 20%;
-        &__image{
-            width: 200px;
-            height: 50px;
-            object-fit: contain;
-        }
-    }
-}
-.image-de-fond{
-    width: 100%;
-    height: auto;
-    object-fit: contain;
+   @include entete-restaurant;
 }
 /*xxxxxxxxxxxxxxxxxxxxxx RESTO xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx*/
 
 .carte-restaurant{
-    @extend %colonne;
-    padding: 15px 15px;
-    margin-top: -20px;
-    border-top-left-radius: 25px;
-    border-top-right-radius: 25px;
-    background-color: $couleur-fond;
-    opacity: 99%;
-    align-items: center;    
-    &__titre{
-        @include police-titre-logo;
-        @extend %ligne;
-       align-items: center;
-       margin-top: -10px;
-       &__coeur{
-            margin-left: 30px;
-        }
-    }
-    &__menu{
-        @extend %colonne;
-        margin-top: -30px;
-        margin-bottom: 30px;
-        width: 100%;
-        &__titre{
-            font-size: 1.2rem;
-            border-bottom: 3px solid $couleur-tertiaire;
-            width: 50px;
-            padding-bottom: 5px;
-            animation: glissement-menu 2s ease-in-out;
-            -o-animation: glissement-menu 2s ease-in-out;
-            -webkit-animation: glissement-menu 2s ease-in-out;
-            
-            @keyframes glissement-menu {
-                from {
-                margin-bottom: 100%;
-                }            
-                to {
-                margin-bottom: 6%;
-                }
-            }
-        }        
-        &__choix{
-            @extend %ligne;
-            margin-bottom: 10px;
-            padding: 0 0 0 15px;
-            border-radius: 20px;
-            background-color: white;
-            justify-content: space-between;
-            cursor: pointer;
-            &__detail{  
-                width: 100%;    
-                white-space: nowrap;
-                overflow: hidden;
-                text-overflow: ellipsis;    
-                &__plat{
-                    font-weight: bold;
-                    margin:10px 0 0 0 ;
-                    white-space: nowrap;
-                    overflow: clip;
-                    text-overflow: ellipsis;
-                }
-                &__ingredient-prix{
-                    @extend %ligne;
-                    justify-content: space-between;
-                    margin-top: -10px;
-                    align-items: center;
-                    &__ingredient{
-                        font-size: small;
-                        white-space:nowrap;
-                        overflow:hidden;
-                        text-overflow:ellipsis;
-                    }
-                    &__prix{
-                        font-weight: bold;
-                        margin-right: 15px;
-                        justify-content: right;
-                        display: flex;
-                        width: 35px;
-                    }
-                }
-            }        
-            &__coche{    
-                width: 50%;
-                background-color: $couleur-tertiaire;                   
-                border-bottom-right-radius: 20px;
-                border-top-right-radius: 20px;
-                display: none;
-                justify-content: center;
-                align-items: center;
-                animation: glissement 0.2s linear 1;
-                @keyframes glissement {
-                    from{
-                        transform: translateX(5px);
-                    
-                    }
-                    to{
-                        transform: translateX(0);
-                        
-                    }                 
-                }
-                &__valide{             
-                    font-size: large;
-                    color: white;                                                   
-                }
-            }
-           
-        }
-        &__choix--dessert, &__choix--plats, &__choix--entree{
-            &:hover{
-                .carte-restaurant__menu__choix__coche--dessert, .carte-restaurant__menu__choix__coche--plats, .carte-restaurant__menu__choix__coche--entree{
-                    display: flex
-                 }
-            }
-        }
+    @include carte-restaurant;
         
-    }
     &__bouton{
         @include bouton-modulable(200px,50px,20px);
         background-image: linear-gradient($couleur-secondaire, $couleur-primaire);
-        border: none;
         color: white;
         @include ombre($couleur-ombre);
         transition: background-image 0.5s, box-shadow 0.5s;

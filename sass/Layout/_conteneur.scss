@@ -1,0 +1,51 @@
+/*xxxxxxxxxxxxxxxxxxxxxxxxx MOBILE xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx*/
+
+@mixin conteneur-accueil {
+    margin: auto;
+    @extend %colonne;
+    overflow: hidden;
+    opacity: 1;
+    animation: transpa 2s linear;
+    @keyframes transpa {
+        0%{
+            opacity: 0;
+        }
+        90%{
+            opacity: 0.1;
+        }
+        98%{
+            opacity:0.3;
+        }
+        100%{
+            opacity: 1;
+        }
+        
+    }
+    
+}
+
+@mixin conteneur {
+    margin: auto;
+    @extend %colonne;
+    overflow: hidden;
+}
+/*xxxxxxxxxxxxxxxxxx TABLETTE xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx */
+
+@mixin conteneur-tablette{
+    max-width: 900px;
+    width: 90%;
+    margin: auto;
+}
+
+/*xxxxxxxxxxxxxxx ORDINATEUR xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx */
+
+@mixin conteneur-ordinateur{
+    max-width: 1300px;
+        width: 80%;
+        margin: auto;
+}
+
+@mixin conteneur-accueil-ordinateur{
+    max-width: 1200px;
+    width: 80%;
+}

@@ -1,6 +1,35 @@
 @mixin pied{
-    display: flex;
-    flex-direction: column;
-        list-style-type: none;    
-            text-decoration: none;  
+    @extend %colonne;
+    padding: 15px;
+    background-color: darken($couleur-fond, 75%);
+    color: white;
+    &__titre{
+        @include police-titre-logo;
+        margin: 0;
+    }
+    &__elements{
+        list-style-type: none;
+        padding-left: 0;
+        margin-top: 10px;
+        &__lien{
+            text-decoration: none;
+            color: white;
+            &__item{
+                margin-bottom: 10px;
+                &__nom{
+                    margin-left: 5px;
+                    &--long{
+                        margin-left: 10px;
+                    }
+                }
+
+            }
+        }
+    } 
+}
+
+
+@mixin pied-tablette{
+    text-align: center;
+        padding-top: 20px;
 }

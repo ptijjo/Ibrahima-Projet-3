@@ -8,6 +8,13 @@
   flex-direction: row;
 }
 
+/*xxxxxxxxxxxxxxxxx TABLETTE xxxxxxxxxxxxxxxxxxxxxxxxxxxxx*/
+/*xxxxxxxxxxxxxxxxxxxxxxxxxxxxx ORDINATEUR xxxxxxxxxxxxxxxxxxxxxxxxx*/
+/*xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx TABLETTE xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx*/
+/*xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx ORDINATEUR xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx*/
+/*xxxxxxxxxxxxxxxxxxxxxxxxx MOBILE xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx*/
+/*xxxxxxxxxxxxxxxxxx TABLETTE xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx */
+/*xxxxxxxxxxxxxxx ORDINATEUR xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx */
 html, body {
   padding: 0;
   margin: 0;
@@ -149,7 +156,6 @@ html, body {
   align-items: center;
   background-color: #F6F6F6;
   padding: 30px 20px 40px 20px;
-  /*margin-bottom: 10px;*/
 }
 .entete__reservation__texte {
   color: #777777;
@@ -161,7 +167,7 @@ html, body {
   display: flex;
   justify-content: center;
   align-items: center;
-  cursor: pointer;
+  border: none;
   cursor: pointer;
   color: white;
   background-image: linear-gradient(#ff79da, #9356dc);
@@ -199,10 +205,10 @@ html, body {
   display: flex;
   justify-content: flex-start;
   align-items: center;
+  border: none;
   cursor: pointer;
   box-shadow: 2px 3px #dddddd;
   background-color: #f9f9f9;
-  border: none;
   transition: background-color 0.5s, box-shadow 0.5s;
 }
 .fonctionnement__menu__bouton__numero {
@@ -243,6 +249,7 @@ html, body {
   background-color: #e9ddf8;
 }
 
+/*************************************** cartes ***********************************************************************************/
 .choix-restaurants {
   padding: 0 10px 60px 10px;
   background-color: #F6F6F6;
@@ -299,6 +306,12 @@ html, body {
   border-top-left-radius: 25px;
   border-top-right-radius: 25px;
 }
+.choix-restaurants__restaurant__image--francaise {
+  object-position: 50% bottom;
+}
+.choix-restaurants__restaurant__image--delice {
+  object-position: 50% bottom;
+}
 .choix-restaurants__restaurant__legende {
   padding: 0px 15px;
 }
@@ -352,8 +365,7 @@ html, body {
   height: 50px;
   object-fit: contain;
 }
-
-.image-de-fond {
+.entete-restaurant .image-de-fond {
   width: 100%;
   height: auto;
   object-fit: contain;
@@ -470,10 +482,9 @@ html, body {
   display: flex;
   justify-content: center;
   align-items: center;
-  cursor: pointer;
+  border: none;
   cursor: pointer;
   background-image: linear-gradient(#ff79da, #9356dc);
-  border: none;
   color: white;
   box-shadow: 2px 3px #CFCFCF;
   transition: background-image 0.5s, box-shadow 0.5s;

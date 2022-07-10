@@ -1,7 +1,11 @@
+/*xxxxxxxxxxxxxxxxx TABLETTE xxxxxxxxxxxxxxxxxxxxxxxxxxxxx*/
+/*xxxxxxxxxxxxxxxxxxxxxxxxxxxxx ORDINATEUR xxxxxxxxxxxxxxxxxxxxxxxxx*/
+/*xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx TABLETTE xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx*/
+/*xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx ORDINATEUR xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx*/
+/*xxxxxxxxxxxxxxxxxxxxxxxxx MOBILE xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx*/
+/*xxxxxxxxxxxxxxxxxx TABLETTE xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx */
+/*xxxxxxxxxxxxxxx ORDINATEUR xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx */
 @media only screen and (min-width: 992px) {
-  .conteneur-totale {
-    background-color: beige;
-  }
   .conteneur {
     max-width: 1300px;
     width: 80%;
@@ -10,7 +14,9 @@
   .conteneur-accueil {
     max-width: 1200px;
     width: 80%;
-    margin-left: 5%;
+  }
+  .entete-restaurant__logo {
+    margin-left: 40%;
   }
   .choix-restaurants {
     -webkit-box-pack: space-evenly;
@@ -21,4 +27,5 @@
     width: 40%;
   }
 }
-/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi4uLy4uLy4uL3Nhc3Mvb3JkaW5hdGV1ci5zY3NzIiwiLi4vLi4vb3JkaW5hdGV1ci5jc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7RUFDSTtJQUNJLHVCQUFBO0VDQ047RURDRTtJQUNJLGlCQUFBO0lBQ0EsVUFBQTtJQUNBLFlBQUE7RUNDTjtFREVFO0lBQ0ksaUJBQUE7SUFDQSxVQUFBO0lBQ0EsZUFBQTtFQ0FOO0VER0U7SUFDSSw4QkFBQTtRQUFBLDJCQUFBO1lBQUEsNkJBQUE7RUNETjtFREVNO0lBQ0ksVUFBQTtFQ0FWO0FBQ0YiLCJmaWxlIjoib3JkaW5hdGV1ci5jc3MifQ== */
+
+/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi4uLy4uL3Nhc3MvQ29tcG9zYW50cy9fY2FydGVzLnNjc3MiLCIuLi8uLi9zYXNzL0xheW91dC9faGVhZGVyLnNjc3MiLCIuLi8uLi9zYXNzL0xheW91dC9fY29udGVuZXVyLnNjc3MiLCIuLi8uLi9zYXNzL29yZGluYXRldXIuc2NzcyIsIi4uL29yZGluYXRldXIuY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQXVPQSwyREFBQTtBQVVBLHFFQUFBO0FDeEpBLHFGQUFBO0FBZ0JBLCtFQUFBO0FDekdBLDhFQUFBO0FBK0JBLGlGQUFBO0FBUUEsaUZBQUE7QUNwQkE7RUFFSTtJRHFCQSxpQkFBQTtJQUNJLFVBQUE7SUFDQSxZQUFBO0VFaENOO0VEYUU7SUR1QkEsaUJBQUE7SUFDQSxVQUFBO0VFakNGO0VEYUU7SUY4RUEsZ0JBQUE7RUd4RkY7RURjRTtJSGtOQSw4QkFBQTtRQUFBLDJCQUFBO1lBQUEsNkJBQUE7RUk3TkY7RUo4Tk07SUFDSSxVQUFBO0VJNU5WO0FBQ0YiLCJmaWxlIjoib3JkaW5hdGV1ci5jc3MifQ== */
