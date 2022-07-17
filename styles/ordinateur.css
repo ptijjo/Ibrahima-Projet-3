@@ -16,13 +16,11 @@
     width: 80%;
   }
   .choix-restaurants {
-    -webkit-box-pack: space-evenly;
-        -ms-flex-pack: space-evenly;
-            justify-content: space-evenly;
+    justify-content: space-evenly;
   }
   .choix-restaurants__restaurant {
     width: 40%;
   }
 }
 
-/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi4uLy4uL3Nhc3MvY29tcG9zYW50cy9fY2FydGVzLnNjc3MiLCIuLi8uLi9zYXNzL2xheW91dC9faGVhZGVyLnNjc3MiLCIuLi8uLi9zYXNzL2xheW91dC9fY29udGVuZXVyLnNjc3MiLCIuLi8uLi9zYXNzL29yZGluYXRldXIuc2NzcyIsIi4uL29yZGluYXRldXIuY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQThQQSwyREFBQTtBQVVBLHFFQUFBO0FDOUtBLHFGQUFBO0FBV0EsK0VBQUE7QUNyR0EsOEVBQUE7QUE0QkEsaUZBQUE7QUFRQSxpRkFBQTtBQ2xCQTtFQUVJO0lEbUJBLGlCQUFBO0lBQ0ksVUFBQTtJQUNBLFlBQUE7RUU3Qk47RURZRTtJRHFCQSxpQkFBQTtJQUNBLFVBQUE7RUU5QkY7RURnQkU7SUgwT0EsOEJBQUE7UUFBQSwyQkFBQTtZQUFBLDZCQUFBO0VJdlBGO0VKd1BNO0lBQ0ksVUFBQTtFSXRQVjtBQUNGIiwiZmlsZSI6Im9yZGluYXRldXIuY3NzIn0= */
+/*# sourceMappingURL=ordinateur.css.map */
