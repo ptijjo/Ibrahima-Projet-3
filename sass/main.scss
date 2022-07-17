@@ -1,20 +1,19 @@
 @import "./utils/variables";
-@import "./Utils/mixins";
-@import "./Utils/placeholders";
+@import "./utils/mixins";
+@import "./utils/placeholders";
 
-@import "./Base/polices";
-@import "./Base/box-sizing";
+@import "./base/polices";
+@import "./base/box-sizing";
 
-@import "./Composants/boutons";
-@import "./Composants/chargement";
-@import "./Composants/cartes";
+@import "./composants/boutons";
+@import "./composants/chargement";
+@import "./composants/cartes";
 
-@import "./Pages/index";
 
-@import "./Layout/footer";
-@import "./Layout/navigation";
-@import "./Layout/header";
-@import "./Layout/conteneur";
+@import "./layout/footer";
+@import "./layout/navigation";
+@import "./layout/header";
+@import "./layout/conteneur";
 
 html, body{
     padding: 0;
@@ -68,16 +67,19 @@ html, body{
 
 .carte-restaurant{
     @include carte-restaurant;
-        
-    &__bouton{
-        @include bouton-modulable(200px,50px,20px);
-        background-image: linear-gradient($couleur-secondaire, $couleur-primaire);
-        color: white;
-        @include ombre($couleur-ombre);
-        transition: background-image 0.5s, box-shadow 0.5s;
-        &:hover{
-            background-image: linear-gradient($couleur-secondaire-claire, $couleur-primaire-claire);
-            @include ombre(darken($couleur-ombre,20%));
+    &__commander{
+        display: flex;
+        justify-content: center;     
+        &__bouton{
+            @include bouton-modulable(200px,50px,20px);
+            background-image: linear-gradient($couleur-secondaire, $couleur-primaire);
+            color: white;
+            @include ombre($couleur-ombre);
+            transition: box-shadow 0.5s;
+            &:hover{
+                background-image: linear-gradient($couleur-secondaire-claire, $couleur-primaire-claire);
+                @include ombre(darken($couleur-ombre,20%));
+            }
         }
     }
 }

@@ -5,16 +5,15 @@
 @import "./Base/polices";
 @import "./Base/box-sizing";
 
-@import "./Composants/boutons";
-@import "./Composants/chargement";
-@import "./Composants/cartes";
+@import "./composants/boutons";
+@import "./composants/chargement";
+@import "./composants/cartes";
 
-@import "./Pages/index";
 
-@import "./Layout/footer";
-@import "./Layout/navigation";
-@import "./Layout/header";
-@import "./Layout/conteneur";
+@import "./layout/footer";
+@import "./layout/navigation";
+@import "./layout/header";
+@import "./layout/conteneur";
 @media only screen and (min-width:768px){
                     /*------------------------- page d'accueil -------------------------------------*/
    

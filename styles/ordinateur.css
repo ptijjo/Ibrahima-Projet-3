@@ -15,9 +15,6 @@
     max-width: 1200px;
     width: 80%;
   }
-  .entete-restaurant__logo {
-    margin-left: 40%;
-  }
   .choix-restaurants {
     justify-content: space-evenly;
   }

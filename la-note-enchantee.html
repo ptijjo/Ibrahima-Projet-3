@@ -10,7 +10,7 @@
         <link rel="stylesheet" type="text/css" href="styles/ordinateur.css">
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&family=Shrikhand&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,300&family=Shrikhand&display=swap" rel="stylesheet">
         <script src="https://kit.fontawesome.com/6863f40f67.js" crossorigin="anonymous"></script> 
         <link rel="shortcut icon" href="#"/> <!-- Permet de regler l'erreur sur la navigateur-->
 
@@ -33,7 +33,10 @@
         <section class="carte-restaurant">
             <h2 class="carte-restaurant__titre">
                 <span>La note enchantée</span>
-                <i class="fa-regular fa-heart carte-restaurant__titre__coeur"></i>
+                <span class="carte-restaurant__titre__coeur">
+                    <span class="fa-regular fa-heart carte-restaurant__titre__coeur__coeur-vide"></span>
+                    <span class="fa-solid fa-heart carte-restaurant__titre__coeur__coeur-plein"></span>
+                </span>
             </h2>
             <article class="carte-restaurant__menu">
                     <h3 class="carte-restaurant__menu__titre">ENTREES</h3>
@@ -164,9 +167,11 @@
                         </div>                        
                     </div>                    
                 </article>
-                <button class="carte-restaurant__bouton">
-                    Commander
-                </button>
+                <div class="carte-restaurant__commander">
+                    <button class="carte-restaurant__commander__bouton">
+                        Commander
+                    </button>
+                </div>
             </section>
 <!--*****************************************  FIN CARTE ***************************************************************************************-->
 <!--**************************************** FOOTER *******************************************************************************************-->

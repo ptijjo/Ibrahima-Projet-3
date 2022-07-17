@@ -14,15 +14,18 @@
        width: 100%;
        &__nouveau{
            background-color: $couleur-tertiaire;
-           width: 70px;
-           height: 20px;
+           width: 90px;
+           height: 30px;
            text-align: center;
-           border-radius: 2px;
+           border-radius: 3px;
            position: relative;
            left: 70%;
            top: 60px;
            color: darken($couleur-tertiaire, 40%);
            margin-top: -35px;
+           display: flex;
+           justify-content: center;
+           align-items: center;
        }
        &__lien{  
            text-decoration: none;  
@@ -35,16 +38,19 @@
                border-top-right-radius: 25px;           
            }
            &__nouveau{
-               background-color: $couleur-tertiaire;
-               width: 70px;
-               height: 20px;
-               text-align: center;
-               border-radius: 2px;
-               position: relative;
-               left: 70%;
-               top: 60px;
-               color: darken($couleur-tertiaire, 40%);
-               margin-top: -35px;
+            background-color: $couleur-tertiaire;
+            width: 90px;
+            height: 30px;
+            text-align: center;
+            border-radius: 3px;
+            position: relative;
+            left: 70%;
+            top: 60px;
+            color: darken($couleur-tertiaire, 40%);
+            margin-top: -35px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
            }
        }
        &__image{
@@ -59,16 +65,15 @@
        }
        &__image--delice{
         object-position: 50% bottom;
-       }
-       
-       
+       }    
        &__legende{
            padding: 0px 15px;
-           &__lieu{
-               margin-top: 0px;                
+           &__nom{
+              font-size: larger;                
            }
            &__lieu{
                margin-top: -15px;
+               font-weight: 300;
            }
        }
        &__favori{
@@ -85,14 +90,14 @@
                color:white;
                font-size:1rem;
                cursor: pointer;
-               transition: 1s linear;   
+               transition: 0.4s linear;   
                &:hover{  
                    color:#9356dc;;
                    background: -webkit-linear-gradient(#ff79da, #9356dc);      
                    -webkit-background-clip: text; 
                    background-clip: text; 
                    font-size:1.5rem;
-                   transition: 1s linear;
+                   transition: 0.4s linear;
                  }                 
            }                        
        }
@@ -115,20 +120,40 @@
 
 @mixin carte-restaurant{
     @extend %colonne;
-    padding: 15px 15px;
+    padding: 0px 15px 100px 15px;
     margin-top: -20px;
     border-top-left-radius: 25px;
     border-top-right-radius: 25px;
     background-color: $couleur-fond;
-    opacity: 99%;
-    align-items: center;    
+    opacity: 99%;   
     &__titre{
         @include police-titre-logo;
         @extend %ligne;
        align-items: center;
-       margin-top: -10px;
+       margin: -10px 0 50px 0;    
        &__coeur{
             margin-left: 30px;
+            display:flex;
+           justify-content:center;
+           align-items:center;
+           &__coeur-vide{
+            position:relative;
+           }
+           &__coeur-plein{
+               position:absolute;
+               color:white;
+               font-size:1.3rem;
+               cursor: pointer;
+               transition: 0.4s linear;   
+               &:hover{  
+                   color:#9356dc;;
+                   background: -webkit-linear-gradient(#ff79da, #9356dc);      
+                   -webkit-background-clip: text; 
+                   background-clip: text; 
+                   font-size:1.5rem;
+                   transition: 0.4s linear;
+                }                
+           }
         }
     }
     &__menu{
@@ -138,13 +163,13 @@
         width: 100%;
         &__titre{
             font-size: 1.2rem;
+            font-weight: 300;
             border-bottom: 3px solid $couleur-tertiaire;
             width: 50px;
             padding-bottom: 5px;
             animation: glissement-menu 2s ease-in-out;
             -o-animation: glissement-menu 2s ease-in-out;
-            -webkit-animation: glissement-menu 2s ease-in-out;
-            
+            -webkit-animation: glissement-menu 2s ease-in-out;            
             @keyframes glissement-menu {
                 from {
                 margin-bottom: 100%;
@@ -195,7 +220,7 @@
                 }
             }        
             &__coche{    
-                width: 50%;
+                width: 25%;
                 background-color: $couleur-tertiaire;                   
                 border-bottom-right-radius: 20px;
                 border-top-right-radius: 20px;
@@ -205,12 +230,10 @@
                 animation: glissement 0.2s linear 1;
                 @keyframes glissement {
                     from{
-                        transform: translateX(5px);
-                    
+                        transform: translateX(5px);                    
                     }
                     to{
-                        transform: translateX(0);
-                        
+                        transform: translateX(0);                        
                     }                 
                 }
                 &__valide{             

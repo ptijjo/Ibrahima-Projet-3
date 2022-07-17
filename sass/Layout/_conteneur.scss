@@ -18,12 +18,9 @@
         }
         100%{
             opacity: 1;
-        }
-        
-    }
-    
+        }        
+    }    
 }
-
 @mixin conteneur {
     margin: auto;
     @extend %colonne;
