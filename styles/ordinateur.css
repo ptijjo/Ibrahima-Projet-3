@@ -2,6 +2,9 @@
 /*xxxxxxxxxxxxxxxxxxxxxxxxxxxxx ORDINATEUR xxxxxxxxxxxxxxxxxxxxxxxxx*/
 /*xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx TABLETTE xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx*/
 /*xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx ORDINATEUR xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx*/
+/*@mixin entete-restaurant-ordinateur{
+
+}*/
 /*xxxxxxxxxxxxxxxxxxxxxxxxx MOBILE xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx*/
 /*xxxxxxxxxxxxxxxxxx TABLETTE xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx */
 /*xxxxxxxxxxxxxxx ORDINATEUR xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx */
@@ -15,11 +18,19 @@
     max-width: 1200px;
     width: 80%;
   }
+  /*.entete-restaurant__logo{
+      @include entete-restaurant-ordinateur;
+  }*/
   .choix-restaurants {
     justify-content: space-evenly;
   }
   .choix-restaurants__restaurant {
     width: 40%;
+  }
+  .image-de-fond {
+    height: 50vh;
+    width: 100%;
+    object-fit: cover;
   }
 }
 

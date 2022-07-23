@@ -63,6 +63,10 @@ html, body{
 .entete-restaurant{
    @include entete-restaurant;
 }
+
+.image-de-fond{
+    @include image-de-fond;
+}
 /*xxxxxxxxxxxxxxxxxxxxxx RESTO xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx*/
 
 .carte-restaurant{

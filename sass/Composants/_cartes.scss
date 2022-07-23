@@ -227,18 +227,33 @@
                 display: none;
                 justify-content: center;
                 align-items: center;
-                animation: glissement 0.2s linear 1;
+                animation: glissement 1s ease-in-out 1;
                 @keyframes glissement {
-                    from{
-                        transform: translateX(5px);                    
+                    0%{
+                        width: 0%;                    
+                  
                     }
-                    to{
-                        transform: translateX(0);                        
+                    100%{
+                        width: 25%;                        
                     }                 
                 }
                 &__valide{             
                     font-size: large;
-                    color: white;                                                   
+                    color: white;  
+                    animation: pivot 1s linear 1;
+                    @keyframes pivot{
+                        0%{ 
+                            transform: rotate(0deg);
+                        }
+
+                        60%{
+                            transform: rotate(360deg);
+                        }
+
+                        100%{
+                            transform: rotate(360deg);
+                        }
+                    }                                                 
                 }
             }
            

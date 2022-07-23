@@ -37,6 +37,10 @@
        @include conteneur-tablette;
         
     }
+    .image-de-fond{
+      @include image-de-fond-tablette;
+    }
+    
     .carte__restaurant{
        @include carte-restaurant-tablette;
     }

@@ -12,6 +12,9 @@
 /*xxxxxxxxxxxxxxxxxxxxxxxxxxxxx ORDINATEUR xxxxxxxxxxxxxxxxxxxxxxxxx*/
 /*xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx TABLETTE xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx*/
 /*xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx ORDINATEUR xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx*/
+/*@mixin entete-restaurant-ordinateur{
+
+}*/
 /*xxxxxxxxxxxxxxxxxxxxxxxxx MOBILE xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx*/
 /*xxxxxxxxxxxxxxxxxx TABLETTE xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx */
 /*xxxxxxxxxxxxxxx ORDINATEUR xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx */
@@ -180,7 +183,7 @@ html, body {
   background-image: linear-gradient(#ff79da, #9356dc);
   box-shadow: 2px 3px #CFCFCF;
   border: none;
-  transition: background-image 0.5s, box-shadow 0.5s;
+  transition: box-shadow 0.5s;
 }
 .entete__reservation__bouton-explorer:hover {
   background-image: linear-gradient(#ff83dd, #985ede);
@@ -375,10 +378,11 @@ html, body {
   height: 50px;
   object-fit: contain;
 }
-.entete-restaurant .image-de-fond {
+
+.image-de-fond {
   width: 100%;
-  height: auto;
-  object-fit: contain;
+  height: 30vh;
+  object-fit: cover;
 }
 
 /*xxxxxxxxxxxxxxxxxxxxxx RESTO xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx*/
@@ -489,19 +493,31 @@ html, body {
   display: none;
   justify-content: center;
   align-items: center;
-  animation: glissement 0.2s linear 1;
+  animation: glissement 1s ease-in-out 1;
 }
 @keyframes glissement {
-  from {
-    transform: translateX(5px);
+  0% {
+    width: 0%;
   }
-  to {
-    transform: translateX(0);
+  100% {
+    width: 25%;
   }
 }
 .carte-restaurant__menu__choix__coche__valide {
   font-size: large;
   color: white;
+  animation: pivot 1s linear 1;
+}
+@keyframes pivot {
+  0% {
+    transform: rotate(0deg);
+  }
+  60% {
+    transform: rotate(360deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
 }
 .carte-restaurant__menu__choix--dessert:hover .carte-restaurant__menu__choix__coche--dessert, .carte-restaurant__menu__choix--dessert:hover .carte-restaurant__menu__choix__coche--plats, .carte-restaurant__menu__choix--dessert:hover .carte-restaurant__menu__choix__coche--entree, .carte-restaurant__menu__choix--plats:hover .carte-restaurant__menu__choix__coche--dessert, .carte-restaurant__menu__choix--plats:hover .carte-restaurant__menu__choix__coche--plats, .carte-restaurant__menu__choix--plats:hover .carte-restaurant__menu__choix__coche--entree, .carte-restaurant__menu__choix--entree:hover .carte-restaurant__menu__choix__coche--dessert, .carte-restaurant__menu__choix--entree:hover .carte-restaurant__menu__choix__coche--plats, .carte-restaurant__menu__choix--entree:hover .carte-restaurant__menu__choix__coche--entree {
   display: flex;

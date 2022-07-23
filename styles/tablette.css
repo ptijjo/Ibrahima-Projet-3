@@ -2,6 +2,9 @@
 /*xxxxxxxxxxxxxxxxxxxxxxxxxxxxx ORDINATEUR xxxxxxxxxxxxxxxxxxxxxxxxx*/
 /*xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx TABLETTE xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx*/
 /*xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx ORDINATEUR xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx*/
+/*@mixin entete-restaurant-ordinateur{
+
+}*/
 /*xxxxxxxxxxxxxxxxxxxxxxxxx MOBILE xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx*/
 /*xxxxxxxxxxxxxxxxxx TABLETTE xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx */
 /*xxxxxxxxxxxxxxx ORDINATEUR xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx */
@@ -49,6 +52,11 @@
     max-width: 900px;
     width: 90%;
     margin: auto;
+  }
+  .image-de-fond {
+    height: 30vh;
+    width: 100%;
+    object-fit: cover;
   }
   .carte__restaurant__menu {
     align-items: center;

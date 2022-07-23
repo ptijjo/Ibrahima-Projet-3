@@ -26,11 +26,14 @@
        @include conteneur-accueil-ordinateur;
     
     }
-    .entete-restaurant__logo{
+    /*.entete-restaurant__logo{
         @include entete-restaurant-ordinateur;
-    }
+    }*/
 
     .choix-restaurants{
         @include carte-restaurant-ordinateur;
+    }
+    .image-de-fond{
+        @include image-de-fond-ordinateur;
     }
 }
