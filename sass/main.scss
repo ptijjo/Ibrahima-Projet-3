@@ -66,8 +66,14 @@ html, body{
 
 .image-de-fond{
     @include image-de-fond;
-    @include image-de-fond--francaise;
+}
+
+.image-de-fond--delice{
     @include image-de-fond--delice;
+}
+
+.image-de-fond--francaise{
+    @include image-de-fond--francaise;
 }
 /*xxxxxxxxxxxxxxxxxxxxxx RESTO xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx*/
 

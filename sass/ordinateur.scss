@@ -35,7 +35,9 @@
     }
     .image-de-fond{
         @include image-de-fond-ordinateur;
-        @include image-de-fond-ordinateur--delice;
+    }
+
+    .image-de-fond--francaise{
         @include image-de-fond-ordinateur--francaise;
     }
 }
