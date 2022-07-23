@@ -39,6 +39,8 @@
     }
     .image-de-fond{
       @include image-de-fond-tablette;
+      @include image-de-fond-tablette--delice;
+      @include image-de-fond-tablette--francaise;
     }
     
     .carte__restaurant{

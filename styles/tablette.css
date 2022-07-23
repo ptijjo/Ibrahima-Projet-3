@@ -2,9 +2,6 @@
 /*xxxxxxxxxxxxxxxxxxxxxxxxxxxxx ORDINATEUR xxxxxxxxxxxxxxxxxxxxxxxxx*/
 /*xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx TABLETTE xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx*/
 /*xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx ORDINATEUR xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx*/
-/*@mixin entete-restaurant-ordinateur{
-
-}*/
 /*xxxxxxxxxxxxxxxxxxxxxxxxx MOBILE xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx*/
 /*xxxxxxxxxxxxxxxxxx TABLETTE xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx */
 /*xxxxxxxxxxxxxxx ORDINATEUR xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx */
@@ -17,11 +14,17 @@
     width: 30%;
   }
   .fonctionnement {
-    flex-direction: row;
-    flex-wrap: wrap;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
   }
   .fonctionnement__menu {
-    justify-content: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
     width: 33%;
   }
   .fonctionnement__titre {
@@ -30,9 +33,15 @@
     text-align: center;
   }
   .choix-restaurants {
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-between;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
   }
   .choix-restaurants h2 {
     width: 100%;
@@ -53,13 +62,10 @@
     width: 90%;
     margin: auto;
   }
-  .image-de-fond {
-    height: 30vh;
-    width: 100%;
-    object-fit: cover;
-  }
   .carte__restaurant__menu {
-    align-items: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
   }
   .carte__restaurant__menuchoix {
     width: 80%;
@@ -67,4 +73,4 @@
   /*--------------------- fin page restaurant -----------------------------------------------*/
 }
 
-/*# sourceMappingURL=tablette.css.map */
+/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi4uLy4uL3Nhc3MvY29tcG9zYW50cy9fY2FydGVzLnNjc3MiLCIuLi8uLi9zYXNzL2xheW91dC9faGVhZGVyLnNjc3MiLCIuLi8uLi9zYXNzL2xheW91dC9fY29udGVuZXVyLnNjc3MiLCIuLi8uLi9zYXNzL3RhYmxldHRlLnNjc3MiLCIuLi90YWJsZXR0ZS5jc3MiLCIuLi8uLi9zYXNzL2xheW91dC9fbmF2aWdhdGlvbi5zY3NzIiwiLi4vLi4vc2Fzcy9sYXlvdXQvX2Zvb3Rlci5zY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQThQQSwyREFBQTtBQVVBLHFFQUFBO0FDOUtBLHFGQUFBO0FBV0EsK0VBQUE7QUNyR0EsOEVBQUE7QUE0QkEsaUZBQUE7QUFRQSxpRkFBQTtBQ3BCQTtFQUNvQixpRkFBQTtFRjRFaEI7SUFDSSxVQUFBO0VHbkZOO0VIcUZFO0lBQ0ksVUFBQTtFR25GTjtFRFFFO0lFc0NBLDhCQUFBO0lBQUEsNkJBQUE7UUFBQSx1QkFBQTtZQUFBLG1CQUFBO0lBQ0EsbUJBQUE7UUFBQSxlQUFBO0VEM0NGO0VDNENFO0lBQ0ksd0JBQUE7UUFBQSxxQkFBQTtZQUFBLHVCQUFBO0lBQ0EsVUFBQTtFRDFDTjtFQzRDRTtJQUNJLGNBQUE7SUFDQSxXQUFBO0lBQ0Esa0JBQUE7RUQxQ047RURGRTtJSGtGQSw4QkFBQTtJQUFBLDZCQUFBO1FBQUEsdUJBQUE7WUFBQSxtQkFBQTtJQUNBLG1CQUFBO1FBQUEsZUFBQTtJQUNBLHlCQUFBO1FBQUEsc0JBQUE7WUFBQSw4QkFBQTtFSTdFRjtFSjhFRTtJQUNJLFdBQUE7SUFDQSxrQkFBQTtFSTVFTjtFSjhFRTtJQUNJLGlCQUFBO0lBQ0EsVUFBQTtFSTVFTjtFRFhFO0lHSUEsa0JBQUE7SUFDSSxpQkFBQTtFRlVOO0VEWkUsOEZBQUE7RUFDQSw4RkFBQTtFQUVBO0lESkEsZ0JBQUE7SUFDQSxVQUFBO0lBQ0EsWUFBQTtFRWtCRjtFSjZNRTtJQUNJLHlCQUFBO1FBQUEsc0JBQUE7WUFBQSxtQkFBQTtFSTNNTjtFSjRNTTtJQUNJLFVBQUE7RUkxTVY7RURYRSw0RkFBQTtBQ2FKIiwiZmlsZSI6InRhYmxldHRlLmNzcyJ9 */

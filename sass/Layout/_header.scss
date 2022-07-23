@@ -85,8 +85,15 @@
 @mixin image-de-fond{
     width: 100%;
     height: 30vh;
-    object-fit: cover;
-    
+    object-fit: cover;    
+}
+
+@mixin image-de-fond--francaise{
+    object-position: 50% bottom;
+}
+
+@mixin image-de-fond--delice{
+    object-position: 50% bottom;
 }
 
 /*xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx TABLETTE xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx*/
@@ -106,6 +113,14 @@
         object-fit: cover;       
     }
 
+@mixin image-de-fond-tablette--francaise{
+    object-position: 50% bottom;
+}
+
+@mixin image-de-fond-tablette--delice{
+    object-position: 50% bottom;
+}
+
 
 /*xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx ORDINATEUR xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx*/
 /*@mixin entete-restaurant-ordinateur{
@@ -116,4 +131,11 @@
     height: 50vh; 
     width: 100%;
     object-fit: cover;
+}
+@mixin image-de-fond-ordinateur--francaise{
+    object-position: 50% bottom;
+}
+
+@mixin image-de-fond-ordinateur--delice{
+    object-position: 50% bottom;
 }
